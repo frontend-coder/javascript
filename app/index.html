@@ -4,416 +4,593 @@
 <![endif]-->
 	<!--[if IE 7]>
 	<html lang="ru" class="lt-ie9 lt-ie8">
-	<![endif]-->
+<![endif]-->
 		<!--[if IE 8]>
 		<html lang="ru" class="lt-ie9">
-		<![endif]-->
+  <![endif]-->
 			<!--[if gt IE 8]>
-			<!-->
-			<html lang="ru">
-			<!--<![endif]-->
-			<head>
-				<meta charset="utf-8" />
-				<title>Собираю мой стартовый шаблон</title>
-				<meta name="description" content="" />
-				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<link rel="shortcut icon" href="images/favicon.png" />
-			<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
-			<link rel="stylesheet" href="css/libs.min.css" />
+       <!-->
+         <html lang="ru">
+         <!--<![endif]-->
+         <head>
+          <meta charset="utf-8" />
+          <title>Чистый стартовый шаблон для сборки рабочих проектов с помощью Gulp</title>
+          <meta name="description" content="" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link rel="shortcut icon" href="images/favicon/favicon.png" />
+          <!-- 3 нижние строки Chrome, Firefox OS and Opera; Windows Phone; iOS Safari    -->
+          <meta name="theme-color" content="#000">
+          <meta name="msapplication-navbutton-color" content="#000">
+          <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+          <style>
+          html {background-color: #fff; }
+          body { opacity: 0; overflow-x: hidden;}
+        </style>
+        <link rel="stylesheet" href="css/libs.min.css" />
+        <link rel="stylesheet" href="css/main.min.css" />
+      </head>
+      <body>
+       <header class="header_img">
 
-			<link rel="stylesheet" href="css/main.min.css" />
-			</head>
-			 <body>
+        <div class="top_line">
+          <div class="container">
+            <div class="row">
+              <div class="top_line_box">
+                <div class="top_line_logo">
+                  <img class="img-responsive" src="images/logo-dark.jpg" alt="логотип магазина" >
+                </div>
+                <div class="top_line_menu">
+                  <ul>
+                    <li><a href="#calculate_block">Калькулятор</a></li>
+                    <li><a href="#video">1 блок</a></li>
+                    <li><a href="#consultation">2 блок</a></li>
+                    <li><a href="#adwiceme">3 блок</a></li>
+                    <li><a href="#contacts">4 блок</a></li>
+                  </ul>
 
-			 	<header class="header_img">
-			 		<div class="top-line">
-			 			<div class="container">
-			 				<div class="top-box clearfix">
-			 					<div class="logo"><img src="images/logo.png" alt=""></div>
-			 					<div class="top-menu">
-			 						<ul>
-			 							<li><a href="#main">главная</a></li>
-			 							<li><a href="#prior">приоритеты</a></li>
-			 							<li><a href="#service">услуги</a></li>
-			 							<li><a href="#command">команда</a></li>
-			 							<li><a href="#adwise">отзывы</a></li>
-			 							<li><a href="#portfolio">портфолио</a></li>
-			 							<li><a href="#price">цены</a></li>
-			 							<li><a href="#contact">контакты</a></li>
-			 						</ul>
-			 					</div>
-<a href="#" class="toggle-mnu"><span></span></a>
-			 				</div>
+                </div>
+                <div class="top_line_phone">
+                  <ul>
+                    <li><a href="tel:+74991111111">+7(499) 111-11-11</a></li>
+                    <li><a href="tel:+79161111111">+7(916) 111-11-11</a></li>
+                    <li>с 9:00 до 21:00, без выходных</li>
+                  </ul>
+                </div>
+<div class="mobile_gamburger">
+                  <a href="#" class="toggle-mnu">
+                    <span></span>
+                  </a>
+</div>
+              </div>
+            </div>
+          </div>
+          <!--start hidden-mnu -->
+          <div class="col-sm-12 col-xs-12 col-md-12">
+            <div class="top-menu hidden-mnu hidden-lg clearfix">
+              <ul>
+                    <li><a href="#catalog">каталог</a></li>
+                    <li><a href="#video">видео</a></li>
+                    <li><a href="#consultation">консультации</a></li>
+                    <li><a href="#adwiceme">отзывы</a></li>
+                    <li><a href="#contacts">контакты</a></li>
+              </ul>
+            </div>
+            <!--end hidden-mnu -->
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="header_content clearfix">
+              <div class="header_content_item">
+                <div class="header_cover">
+                  <div class="header_title">
+                    <h1>Учу javascript
+                      <span>c нуля до Vuejs!</span> </h1>
+                    </div>
+                    <div class="header_descr">
+                      выучи язык * <span>- переселись в Канаду!</span>
+                    </div>
+                   </div>
+                 </div>
 
-			 			</div>
-			 							<div class="hidden-mnu">
-			 						<ul>
-			 							<li><a href="#main">главная</a></li>
-			 							<li><a href="#prior">приоритеты</a></li>
-			 							<li><a href="#service">услуги</a></li>
-			 							<li><a href="#command">команда</a></li>
-			 							<li><a href="#adwise">отзывы</a></li>
-			 							<li><a href="#portfolio">портфолио</a></li>
-			 							<li><a href="#price">цены</a></li>
-			 							<li><a href="#contact">контакты</a></li>
-			 						</ul>
-			 					</div>
-			 		</div>
-			 	</header>
+                 <div class="header_content_item">
+                  <div class="big_form_box">
+                    <div class="form_girl">
+                    </div>
+                    <div class="form_fon">
+                      <div class="forms-call">
+
+                      <h3 class="form_fon_title">Получите расчет проекта <span>бесплатно</span> прямо сейчас! </h3>
+                      <form class="forms-calldecor">
+                           <div class="success">
+                        <p>Наш специалист свяжется с Вами в ближайшее время</p>
+                      </div>
+                       <input type="hidden" name="formaone" value="форма размещена в шапке сайта">
+
+                        <input id="phone_header" class="input_form" type="tel" name="phone" value="" required="required"  />
+                        <input name="submit" class="submit" type="submit" id="submits_header" data-form="заявка на расчет смету бесплатно в хедере" value="Расчитать смету бесплатно"  data-text="Расчитать смету бесплатно" />
+                        <div class="checkbox_box clearfix">
+                         <input type="checkbox" name="option2" id="option_one" class="radioterms" checked />
+                         <label for="option_one" class="link_form"> <span><a href="#politics"> согласен c
+                         политикой конфиденциальности</a></span> </label>
+                       </div>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </header>
 
 
-<section class="b_p block_yellow" id="main">
-
-<div class="first">Это первое предложениеЭто первое предложение Это первое предложение Это первое предложение Это первое предложениеЭто
- Это первое предложение Это первое предложение Это первое предложение Это первое предложение Это первое предложение Это первое предложение
-</div>
-<div id="first">Это первое предложениеЭто первое предложение Это первое предложение Это первое предложение Это первое предложениеЭто
- Это первое предложение Это первое предложение Это первое предложение Это первое предложение Это первое предложение Это первое предложение
-</div>
-<div id="second">Это первое предложениеЭто первое предложение Это первое предложение Это первое предложение Это первое предложениеЭто
- Это первое предложение Это первое предложение Это первое предложение Это первое предложение Это первое предложение Это первое предложение
-</div>
-<div class="block" name="namem">Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name
-	Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name  предложение
-</div>
-<div class="block" name="namem">Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name
-	Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name  предложение
-</div>
-<div class="block" name="doun">Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name
-	Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name  предложение
-</div>
-
-<div class="block b_lock" id="redi">Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name
-	Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name  предложение
-</div>
-<div class="b_lock" >Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name
-	Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name  предложение
-</div>
-<div class="b_lock" id="chemil" >к этому контйнеру привязан id="chemil" в скрипте указано, что все контейнеры, кроме эдинственного, который привязан к этому id
-должны иметь бордюры цвета brown  этот конетйнер обладаетЭто первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name
-	Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name  предложение
-</div>
 
 
-<div class="block" name="string" >Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name
-	Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name  предложение
-</div>
 
-<div class="block" name="ferststr" >Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name
-	Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name  предложение
-</div>
 
-<div class="block" name="yogulppotrrsdtgdgssdgf" >Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name
-	Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name  предложение
-</div>
+<!-- форма которую нужно протестировать первая форма
+стили в обычном css файле,
+оформление select с помощью плагина Custom-Select
+работа кальклятора обеспепчивается кодом, который разположен внизу этого файла
+ -->
+<section class="block" id="calculate_block">
+  <div class="container">
+<h2 class="title_block" >Первый вариант калькулятора</h2>
+<h3 class="title_block_descr"> форма которую нужно протестировать,
+первая форма стили в обычном css файле, оформление select с помощью плагина Custom-Select,
+работа калькулятора обеспепчивается кодом, который разположен внизу этого файла</h3>
 
-<div class="block" name="yo dura potrrs" >Это dnjhjt первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name
-	Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name  предложение
+
+    <div class="row">
+
+          <form id="calc_f" class="forms-calldecor">
+            <input type="hidden" name="admin-data" value="форма размещена в калькуляторе">
+            <input type="hidden" name="formaone" value="форма не размещена во всплывающем окне">
+            <div class="success">
+              <p>Спасибо за заявку</p>
+            </div>
+            <div class="calculator_box clearfix">
+              <div class="calculator_box_item">
+                <div class="calculator_item_yell">
+                  <div class="calculator_item_title">Вы хотите организовать:</div>
+                  <div class="calculator_item_text">
+                    <span id="typemerop">.....</span>, место проведения
+                    <span id="country_merop">......</span>. Ориентировочное количество
+                    <span id="persons_quntity">......</span>
+                  </div>
+                  <div class="calculator_item_idea">у меня для вас есть
+                    <span id="idea_quntity">305 идей</span>
+                  </div>
+                  <div class="calculator_idea_button">
+                    <button data-form="заказ услуги из калькулятора" data-text="Расчитать стоимость мероприятия">
+                      узнать варианты</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator_box_item">
+                <div class="select">
+                  <select class="custom-select" id="mounth" name="typeadukation" onchange="funbizz()">
+
+                    <option value="Деловые мероприятия, тренинги">Деловые мероприятия, тренинги</option>
+                    <option value="Спортивные и командообразующие">Спортивные и командообразующие</option>
+                    <option value="Мотивационные мероприятия">Мотивационные мероприятия</option>
+                    <option value="Праздничные мероприятия">Праздничные мероприятия</option>
+                    <option value="Путешествия и туризм">Путешествия и туризм</option>
+                  </select>
+                </div>
+
+                <div class="select">
+                  <select id="year" class="kindtype" name="typecity" onchange="funperson()">
+                    <option value="Москва и МО">Москва и МО</option>
+                    <option value="Россия">Россия</option>
+                    <option value="Страны СНГ">Страны СНГ</option>
+                    <option value="Европа">Европа</option>
+                    <option value="Азия">Азия</option>
+                    <option value="Америка">Америка</option>
+                  </select>
+                </div>
+
+                <div class="select">
+                  <select id="person_order" class="custom-select" name="typemans" onchange="funquantity()">
+                    <option hidden>Сколько человек</option>
+                    <option value="1 человек">1 человек</option>
+                    <option value="2 человека">2 человека</option>
+                    <option value="от 3 до 5 ">от 3 до 5 человек</option>
+                    <option value="от 6 до 10 ">от 6 до 10 людей</option>
+                    <option value="от 11 до 15 ">от 11 до 15 человек</option>
+                    <option value="от 16 ">от 16 человек</option>
+                  </select>
+                </div>
+
+        <input id="phone_calcul" class="our_form" type="text" name="phone" onchange="funphone()" required="required"  />
+                <div class="checkbox_box_master">
+                  <div class="checkbox_box">
+                    <div class="checkbox custom">
+                      <input id="phone_cvalky" class="css-checkbox" type="checkbox" />
+                      <label for="phone_cvalky" class="css-label">Я даю согласие на обработку своих персональных данных и ознакомлен с
+                        <a href="/politics.html">политикой конфиденциальности</a>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="calculator_phone">
+                  Или просто позвоните нам
+                  <a href="tel:+79500000000">+7 (950) 000-00-00</a>
+                </div>
+              </div>
+              <div class="calculator_box_item">
+                <div class="calculator_rest_box clearfix">
+                  <div class="calculator_rest_box_left" id="calculator_type">Начните с определения типа мероприятия</div>
+                  <div class="calculator_rest_box_right" id="calculator_number">1</div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+
 </div>
-<div class="block" name="pref-stroka" >Это строка с префиксом   dnjhjt первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name
-	Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name Это первое предложение c атрибутом name  предложение
 </div>
-<h2>Это первый заголовок</h2>
-<h2>Это второй заголовок</h2>
-<h2>Это третий  заголовок</h2>
+</section>
+
+
+<section class="padding_block">
+
+</section>
+
+<!--  вторая форма, оформление select с помощью плагина Custom-Select,
+работа калькулятора обеспепчивается кодом, который разположен в отдельном файле common.js
+ -->
+<section class="block">
+  <div class="container">
+<h2 class="title_block" >Второй вариант калькулятора</h2>
+<h3 class="title_block_descr"> вторая форма, оформление select с помощью плагина Custom-Select,
+работа калькулятора обеспепчивается кодом, который разположен в отдельном файле common.js</h3>
+    <div class="row">
+
+          <form id="calc_f" class="forms-calldecor">
+            <input type="hidden" name="admin-data" value="форма размещена в калькуляторе">
+            <input type="hidden" name="formaone" value="форма не размещена во всплывающем окне">
+            <div class="success">
+              <p>Спасибо за заявку</p>
+            </div>
+            <div class="calculator_box clearfix">
+              <div class="calculator_box_item">
+                <div class="calculator_item_yell">
+                  <div class="calculator_item_title">Вы хотите организовать:</div>
+                  <div class="calculator_item_text">
+                    <span id="typemerop_two">.....</span>, место проведения
+                    <span id="country_merop_two">......</span>. Ориентировочное количество
+                    <span id="persons_quntity_two">......</span>
+                  </div>
+                  <div class="calculator_item_idea">у меня для вас есть
+                    <span id="idea_quntity">305 идей</span>
+                  </div>
+                  <div class="calculator_idea_button">
+                    <button data-form="заказ услуги из калькулятора" data-text="Расчитать стоимость мероприятия">
+                      узнать варианты</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator_box_item">
+                <div class="select">
+                  <select class="custom-select" id="select_one" name="typeadukation">
+                    <option value="Деловые мероприятия, тренинги">Деловые мероприятия, тренинги</option>
+                    <option value="Спортивные и командообразующие">Спортивные и командообразующие</option>
+                    <option value="Мотивационные мероприятия">Мотивационные мероприятия</option>
+                    <option value="Праздничные мероприятия">Праздничные мероприятия</option>
+                    <option value="Путешествия и туризм">Путешествия и туризм</option>
+                  </select>
+                </div>
+
+                <div class="select">
+                  <select id="select_two" class="custom-select" name="typecity">
+                    <option value="Москва и МО">Москва и МО</option>
+                    <option value="Россия">Россия</option>
+                    <option value="Страны СНГ">Страны СНГ</option>
+                    <option value="Европа">Европа</option>
+                    <option value="Азия">Азия</option>
+                    <option value="Америка">Америка</option>
+                  </select>
+                </div>
+
+                <div class="select">
+                  <select id="select_three" class="custom-select" name="typemans" onchange="funquantity()">
+                    <option hidden>Сколько человек</option>
+                    <option value="1 человек">1 человек</option>
+                    <option value="2 человека">2 человека</option>
+                    <option value="от 3 до 5 ">от 3 до 5 человек</option>
+                    <option value="от 6 до 10 ">от 6 до 10 людей</option>
+                    <option value="от 11 до 15 ">от 11 до 15 человек</option>
+                    <option value="от 16 ">от 16 человек</option>
+                  </select>
+                </div>
+
+        <input id="phone_calculthree" class="our_form" type="text" name="phone" onchange="funphone()" required="required"  />
+                <div class="checkbox_box_master">
+                  <div class="checkbox_box">
+                    <div class="checkbox custom">
+                      <input id="phone_cvalky" class="css-checkbox" type="checkbox" />
+                      <label for="phone_cvalky" class="css-label">Я даю согласие на обработку своих персональных данных и ознакомлен с
+                        <a href="/politics.html">политикой конфиденциальности</a>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="calculator_phone">
+                  Или просто позвоните нам
+                  <a href="tel:+79500000000">+7 (950) 000-00-00</a>
+                </div>
+              </div>
+              <div class="calculator_box_item">
+                <div class="calculator_rest_box clearfix">
+                  <div class="calculator_rest_box_left" id="calculator_type">Начните с определения типа мероприятия</div>
+                  <div class="calculator_rest_box_right" id="calculator_number">1</div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+
+</div>
+</div>
+</section>
+
+<section class="padding_block">
+
+</section>
+
+<section class="block">
+  <div class="container">
+<h2 class="title_block"> Третий вариант калькулятора</h2>
+<h3 class="title_block_descr"> вторая форма, оформление select с помощью плагина Custom-Select,
+работа калькулятора обеспепчивается кодом, который разположен в отдельном файле common.js</h3>
+    <div class="row">
+
+
+    </div>
+  </div>
+</section>
+
+
+<section class="padding_block">
+
+</section>
+
+
+<section class="block">
+  <div class="container">
+    <h2 class="title_block"> Работаю над JAVASCRIPT</h2>
+    <h3 class="title_block_descr"> работа над базовыми навыками javascript, которые нужны для написания
+    самых простых элементов, код размещен в документе common.js</h3>
+    <div class="row">
+      <div class="col-lg-3">
+        <div id="cont_one"> </div>
+      </div>
+      <div class="col-lg-3">
+        <div id="cont_two"> </div>
+      </div>
+      <div class="col-lg-3">
+        <div id="cont_three"> </div>
+      </div>
+      <div class="col-lg-3">
+        <div id="cont_foure"> </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+     <section class="block block_h grey_block">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+     <section class="block block_h grey_block" id="catalog">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="b_w">
+            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Это заглавных пунктуация, о не родного, грамматики прямо оксмокс до силуэт что ведущими?
+         </div>
+          </div>
+          <div class="col-md-6">
+             <div class="b_w">
+            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Это заглавных пунктуация, о не родного, грамматики прямо оксмокс до силуэт что ведущими?
+             <a href="#call-backtimer" class="submit" data-form="заказ на Ergobox 3S/3PR цена 55 000 / 60 800"  data-text="Успейте оставить заявку сейчас">
+             Оставить заявку
+           </a>
+
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="block block_h blue_block" id="video">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+ <a href="#call-backtimer" class="submit" data-form="заказ на Ergobox 3S/3PR цена 55 000 / 60 800"  data-text="Успейте оставить заявку сейчас">
+ Это кнопка </a>
+
+          </div>
+        </div>
+      </div>
+
+
+</section>
+<section class="block block_h Aqua_block" id="consultation">
+
+
+
+</section>
+
+<section class="block block_h BlueViolet_block" id="adwiceme">
+
+
+
+</section>
+
+<section class="block block_h Chocolate_block" id="contacts">
+
 
 
 </section>
 
 
-<section class="b_p" id="prior">
-<!-- простые фильтры -->
-<ul class="list_ul list">
-	<li>Это первый пункт для текста</li>
-	<li>Это второй пункт для текста</li>
-	<li>Это третий пункт для текста</li>
-	<li>Это четвертый пункт для текста</li>
-	<li>Это пятый пункт для текста</li>
-</ul>
-
-<ol class="list_ul list">
-	<li>Это первый пункт для текста</li>
-	<li>Это второй пункт для текста</li>
-	<li>Это третий пункт для текста</li>
-	<li>Это четвертый пункт для текста</li>
-	<li>Это пятый пункт для текста</li>
-</ol>
-
-
-<h2 class="list_ul">Это заголовок первый</h2>
-<p class="list_ul">Это заголовок первый</p>
-
-<h3 class="list_ul">Это заголовок первый</h3>
-
-
-<ul class="chet">
-	<li>четный номер позиций</li>
-	<li>нечетный номер позиций</li>
-	<li>четный номер позиций</li>
-	<li>нечетный номер позиций</li>
-	<li>четный номер позиций</li>
-	<li>нечетный номер позиций</li>
-	<li>четный номер позиций</li>
-</ul>
-
-
-<ul class="ind">
-	<li>четный номер позиций - 0</li>
-	<li>нечетный номер позиций - 1</li>
-	<li>четный номер позиций - 2</li>
-	<li>нечетный номер позиций - 3</li>
-	<li>четный номер позиций - 4 в выборку все больше 4</li>
-	<li>нечетный номер позиций - 5</li>
-	<li>четный номер позиций - 6</li>
-</ul>
-
-
-<ul class="indmen">
-	<li>четный номер позиций - 0</li>
-	<li>нечетный номер позиций - 1</li>
-	<li>четный номер позиций - 2</li>
-	<li>нечетный номер позиций - 3</li>
-	<li>четный номер позиций - 4 </li>
-	<li>нечетный номер позиций - 5</li>
-	<li>четный номер позиций -  6 в выборку все меньше 6</li>
-		<li>нечетный номер позиций - 7</li>
-	<li>четный номер позиций - 8</li>
-</ul>
-
-
-
-<div class="headere">
-	<h2 class="headere">заголовок</h2>
-	<h3 class="headere">заголовок</h3>
-		<h1 class="headere">заголовок</h1>
-	<p class="headere">предложение предложение</p>
-	<div class="headere">предложение предложение</div>
-	<pre class="headere">предложение предложение</pre>
-</div>
-
-</section>
-
-
-
-<section class="b_p block_black" id="service">
-<!-- фильтры по содержимомуфильтры по содержимому -->
-
-<h2>заголовок содержит слово Архив</h2>
-<h2>заголовок содержит слово архив</h2>
-<p>предложение содержит слово Архив</p>
-<p>предложение содержит слово архив</p>
-<h2>заголовок содержит слово Архив</h2>
-<h5>Ниже расположены 2 пустые контейнера</h5>
-<p></p>
-<div></div>
-<p class="includ_p">Это предложение <span>не имеет </span>не имеет продолжения</p>
-
-<p class="includ_p">Это предложение не имеет тега span, не имеет продолжения</p>
-
-
-<div class="includ_p">Это предложение <span>имеет тег span,</span> не имеет продолжения
-</div>
-
-
-<div class="pereant">Это тест фильтр pereant не имеет продолжения
-</div>
-<p class="pereant">Это тест фильтр pereant не  не имеет продолжения
-</p>
-<pre class="pereant"></pre>
-<span class="pereant">Это тест фильтр pereant не  не имеет продолжения
-</span>
-
-
-
-
-</section>
-
-
-
-<section class="b_p" id="command">
-	<!-- фильтры по дочерним элементам -->
-<ul class="f_ch_ul">
-	<li>Это первый </li>
-	<li>это второй</li>
-	<li>это третий</li>
-		<li>это четвертый</li>
-			<li>это пятыйтретий</li>
-				<li>это третий</li>
-</ul>
-
-<div class="conch">
-	<p>Это первый предложение </p>
-	<p>это второй предложение</p>
-	<p>это третий предложение</p>
-		<p>это четвертый предложение</p>
-			<p>это пятыйтретий предложение</p>
-				<p>это третий предложение</p>
-</div>
-
-<div class="only-ch">
-	<p>Это первый предложение </p>
-	<h3>это второй предложение</h3>
-	<h4>это третий предложение</h4>
-		<h4>это четвертый предложение</h4>
-			<h6>это пятыйтретий предложение</h6>
-				<h1>это третий предложение</h1>
-</div>
-</section>
-
-<section class="b_p block_orange" id="adwise">
-
-<!-- фильтры элементов форм -->
-
-<form class="forma-test" name="f1" method="get" action="enter_data.php">
-<input name="link" type="hidden" value="index.php" />
-Логин: <br />
-<input name="login" type="text" size="25" maxlength="30" value="Вася" /> <br />
-Пароль: <br />
-<input name="pd" type="password" size="25" maxlength="30" value="" /> <br />
-<input name="remember" type="checkbox" value="yes" /> Запомнить <br />
-<input type="submit" name="enter" value="Вход" />
-<input type="button" name="enter" value="Вход" />
-<input type="radio" name="radio" />
-<input type="radio" name="radio" />
-<input type="radio" name="radio" />
-</form>
-
-<form class="forma_g">
- <select onchange="my_func()" name="sel">
-<option value="one">Один</option>
-<option value="two">Два</option>
-<option value="three">Три</option>
- </select>
-</form>
-
-
-
-<form class="forma_d">
-<input onchange="funking()" type="checkbox" value="newsletter" name="radio">
-<input onchange="funking()" type="checkbox" value="news" name="radio">
-<input onchange="funking()" type="checkbox" value="newsbower" name="radio">
-
-</form>
-</section>
-
-<section class="block_padding block_blue" id="portfolio">
-
-<!--  ИСПОЛЬЗОВАНИЕ НЕСКОЛЬКИХ СЕЛЕКТОРОРОВ -->
-
-<div class="viboe">
-	<p>kgjkljkljkljkljkljkljkl</p>
-	<p>kgjkljkljkljkljkljkljkl</p>
-	<span>kgjkljkljkljkljkljkljkl</span>
-		<span>kgjkljkljkljkljkljkljkl</span>
-
-			<h2>kgjkljkljkljkljkljkljkl</h2>
-
-				<h3>kgjkljkljkljkljkljkljkl</h3>
-</div>
-
-<div class="bratuzel">
-	<p>kgjkljkljkljkljkljkljkl</p>
-	<p>kgjkljkljkljkljkljkljkl</p>
-	<span>kgjkljkljkljkljkljkljkl</span>
-		<span>kgjkljkljkljkljkljkljkl</span>
-
-			<h2>kgjkljkljkljkljkljkljkl</h2>
-
-				<h3>kgjkljkljkljkljkljkljkl</h3>
-</div>
 
 
 
 
 
-</section>
 
-<section class="block_padding block_orange" id="price">
+       <!--оформление скрытой всплывающей формы женщины с таймером -->
+       <div class="hidden">
+        <form class="forms-call form-callback forms-calldecor" id="call-backtimer">
+
+           <input type="hidden" name="admin-data">
+           <input type="hidden" name="formaone" value="форма размещена во всплывающем окне">
+           <div class="success">
+            <p>Спасибо за заявку</p>
+          </div>
+       <div class="form-callback_iner">
+          <h4>Заказать септик под ключ</h4>
+          <h5>и мы бесплатно сделаем замеры, подберем септик и доставим его к вам!</h5>
+          <div class="fcb clearfix">
+      <div class=" b_item">
+           </div>
+            <div class="form-callback_item">
+              <label> <span class="label_name">Ваше имя</span>
+               <input id="author_two" class="input_form" type="text" name="author" value="" placeholder="Например, Олег Юрьевич" required="required"  />
+             </label>
+             <label><span class="label_name">Телефон</span>
+               <input id="phone_key" class="input_form" type="tel" name="phone" value="" required="required"  />
+             </label>
+             <div class="button-call">
+              <button class="submit_bb">Отправить</button>
+            </div>
+
+            <div class="checkbox_box clearfix">
+             <input type="checkbox" name="option2" id="option_foure" class="radioterms" checked />
+             <label for="option_foure" class="link_form"> <span><a href="#politics"> согласен c
+             политикой конфиденциальности</a></span> </label>
+           </div>
+         </div>
+       </div>
+     </div>
+   </form>
+ </div>
 
 
-</section>
-<section class="block_padding block_blue" id="contact">
 
 
-</section>
 
-
-<!--оформление футера -->
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="footer-block clearfix">
-					<div class="footer-block-icon">
-						<img src="images/favicon.png">
-					</div>
-
-					<div class="footer-links footer-block-text">
-						<ul>
-							<li>Copyright 2017. Бизнес Квест Натальи Яшиной</li>
-							<li>Email: <a href="mailto: natalia@businesskvest.ru">natalia@businesskvest.ru</a></li>
-							<li><a target="_blank" href="https://businesskvest.ru/ofer.html">Партнерская программа</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="footer-links">
-					<ul>
-						<li><a target="_blank" href="https://businesskvest.ru/privat.html">Политика конфиденциальности</a></li>
-						<li><a target="_blank" href="http://lediseo.support-desk.ru/">Служба поддержки клиентов</a></li>
-						<li><a target="_blank" href="https://businesskvest.ru/ofer.html">Условия и гаратнии</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="footer-paymant">
-					<h2>Мы принимаем</h2>
-					<img src="images/payments.png">
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-					<!--оформление скрытой всплывающей формы -->
-					<div class="hidden">
-						<form class="forms-call form-callback forms-calldecor" id="call-back">
-							<input type="hidden" name="admin-data">
-							<div class="success">
-								<p>Спасибо за заявку</p>
-							</div>
-<img src="images/logo-windous.png">
-
-							<h4>Заказать монтаж</h4>
-
-							<label>
-								<input type="text" name="name" placeholder="Введите Ваше имя *" required>
-							</label>
-							<label>
-								<input type="text" name="email" placeholder="Введите Ваш E-mail *"  required>
-							</label>
-							<div class="button-call">
-								<button class="get-buttons">Отправить</button>
-								<input type="hidden" name="formaone" value="форма размещена во всплывающем окне"></div>
-							</form>
-						</div>
 
 				<!--[if lt IE 9]>
 				<script src="libs/html5shiv/es5-shim.min.js"></script>
 				<script src="libs/html5shiv/html5shiv.min.js"></script>
 				<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
 				<script src="libs/html5shiv/respond.min.js"></script>
-				<![endif]-->
-				<script src="js/libs.min.js"></script>
-		<!-- 			<script src="libs/jquery/jquery.inview.min.js"></script>
-				<script src="libs/jquery/wow.min.js"></script>
-				<script src="libs/animateNumber/jquery.animateNumber.min.js"></script> -->
-<!-- <script src="libs/waypoints/waypoints.min.js"></script> -->
-			<!-- 	<script src="js/common.js"></script> -->
-				<!-- Yandex.Metrika counter -->
-				<!-- /Yandex.Metrika counter -->
-				<!-- Google Analytics counter -->
-				<!-- /Google Analytics counter -->
-			</body>
-			</html>
+      <![endif]-->
+      <script src="js/libs.min.js"></script>
+            <script>
+function funbizz() {
+var mounth, options, rezult;
+ mounth = document.getElementById('mounth').selectedIndex;
+options = document.getElementById('mounth').options;
+rezult = (options[mounth].text);
+document.getElementById("typemerop").innerHTML = rezult;
+document.getElementById("calculator_number").innerHTML = '2';
+document.getElementById("calculator_type").innerHTML = 'Выберите страну или город для проведения мероприятия';
+
+ if (rezult == 'Деловые мероприятия, тренинги' ) {
+  document.getElementById("idea_quntity").innerHTML = '259 идей';
+ }
+  if  (rezult == 'Спортивные и командообразующие' ) {
+  document.getElementById("idea_quntity").innerHTML = '158 идей';
+ }
+ if  (rezult == 'Мотивационные мероприятия' ) {
+  document.getElementById("idea_quntity").innerHTML = '178 идей';
+ }
+ if  (rezult == 'Праздничные мероприятия' ) {
+  document.getElementById("idea_quntity").innerHTML = '289 идей';
+ }
+ if  (rezult == 'Путешествия и туризм' ) {
+  document.getElementById("idea_quntity").innerHTML = '105 идей';
+ }
+ if  (rezult == '.....' ) {
+  document.getElementById("idea_quntity").innerHTML = '305 идей';
+ }
+ }
+
+function funperson() {
+var year, options, rezultperson;
+ year = document.getElementById('year').selectedIndex;
+options = document.getElementById('year').options;
+rezultperson = (options[year].text);
+ document.getElementById("country_merop").innerHTML = rezultperson;
+ document.getElementById("calculator_number").innerHTML = '3';
+document.getElementById("calculator_type").innerHTML = 'Определите количество участников вашего мероприятия';
+ if (rezultperson == 'Москва и МО' ) {
+  document.getElementById("idea_quntity").innerHTML = '265 идей';
+ };
+ if  (rezultperson == 'Россия' ) {
+  document.getElementById("idea_quntity").innerHTML = '178 идей';
+ };
+ if  (rezultperson == 'Страны СНГ' ) {
+  document.getElementById("idea_quntity").innerHTML = '187 идей';
+ };
+ if  (rezultperson == 'Европа' ) {
+  document.getElementById("idea_quntity").innerHTML = '299 идей';
+ };
+ if  (rezultperson == 'Азия' ) {
+  document.getElementById("idea_quntity").innerHTML = '145 идей';
+ };
+  if  (rezultperson == 'Америка' ) {
+  document.getElementById("idea_quntity").innerHTML = '301 идея';
+ };
+ if  (rezultperson == '.....' ) {
+  document.getElementById("idea_quntity").innerHTML = '305 идей';
+ };
+};
+
+function funquantity() {
+var person_order, options, rezultperson;
+ person_order = document.getElementById('person_order').selectedIndex;
+options = document.getElementById('person_order').options;
+rezultperson = (options[person_order].text);
+ document.getElementById("persons_quntity").innerHTML = rezultperson;
+ document.getElementById("calculator_number").innerHTML = '4';
+document.getElementById("calculator_type").innerHTML = 'Укажите номер контактного телефона';
+};
+function funphone() {
+document.getElementById("calculator_number").innerHTML = '5';
+document.getElementById("calculator_type").innerHTML = 'Нажмите на кнопку "Узнать варианты" и получите возможные варианты для вас';
+};
+</script>
+      <!-- Yandex.Metrika counter -->
+      <!-- /Yandex.Metrika counter -->
+      <!-- Google Analytics counter -->
+      <!-- /Google Analytics counter -->
+    </body>
+    </html>

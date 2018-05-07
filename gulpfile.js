@@ -25,6 +25,15 @@ var concat                = require('gulp-concat');
 // npm install --save-dev gulp-concat для обьединения js файлов
 var uglify                = require('gulp-uglifyjs');
 // npm i --save-dev gulp-uglifyjs
+
+//  var criticalCss = require('gulp-critical-css');
+// этот пакет тестировать          $ npm install --save-dev gulp-critical-css
+var gutil = require('gulp-util');
+var critical = require('critical').stream;
+//$ npm install --save critical
+
+
+
 var imagemin              = require('gulp-imagemin');
 var pngquant              = require('imagemin-pngquant');
 // npm i gulp-imagemin imagemin-pngquant --save-dev
@@ -73,11 +82,24 @@ gulp.task('css-libs', ['sass'], function () {
 gulp.task('scripts', function () {
  return gulp.src([
 'app/libs/jquery/jquery.min.js',
-'app/libs/equalHeights/equalHeights.min.js',
+// 'app/libs/jquery/jquery-migrate-1.2.1.min.js',
 'app/libs/nicescroll/jquery.nicescroll.min.js',
-'app/libs/jquery.PageScroll2id/jquery.PageScroll2id.min.js',
+'app/libs/jQuery-Mask/jquery.mask.min.js',
+'app/libs/icheck/icheck.min.js',
 'app/libs/magnific-popup/jquery.magnific-popup.min.js',
-'app/libs/owlcarousel/owl.carousel.min.js',
+'app/libs/jquery.PageScroll2id/jquery.PageScroll2id.min.js',
+'app/libs/Custom-Select/jquery.custom-select.min.js',
+// 'app/libs/equalHeights/equalHeights.min.js',
+// 'app/libs/animate/animate-css.js',
+// 'app/libs/animate/jquery.waypoints.min.js',
+// 'app/libs/jqBootstrapValidation/jqBootstrapValidation.js',
+// 'app/libs/jQuery-Mask/jquery.mask.min.js',
+//   'app/libs/mmenu/jquery.mmenu.all.js',
+//  'app/libs/owlcarousel/owl.carousel.min.js',
+//   'app/libs/swiper/swiper.min.js',
+//   'app/libs/paralax/parallax.min.js',
+//   'app/libs/Vertical-Horizontal-Tabs/jquery.tabs.min.js',
+
 'app/libs/jquery/common.js'
    ])
  .pipe(concat('libs.min.js'))
@@ -129,17 +151,22 @@ gulp.watch('app/css/**/*.css', browserSync.reload);   // Наблюдение з
 gulp.task('default', ['browser-sync', 'watch']);
 
 
-
-
-
-
-
 gulp.task('clean', function() {
     return del.sync('dist'); // Удаляем папку dist перед сборкой
 });
 
+gulp.task('critical', function () {
+    return gulp.src('app/*.html')
+        .pipe(critical({base: 'dist/',
+            inline: true,
+             css: ['app/css/libs.min.css',
+             'app/css/main.min.css']}))
+        .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
+        .pipe(gulp.dest('dist/'));
+});
+
 // сборка проекта
-gulp.task('build', ['clean', 'img', 'css-libs', 'scripts'], function(){
+gulp.task('build', ['clean', 'img', 'css-libs', 'scripts', 'critical'], function(){
 
 var buildCss = gulp.src(['app/css/libs.min.css','app/css/main.min.css'])
 .pipe(concat('libs.min.css'))
@@ -152,8 +179,8 @@ var buildfonts = gulp.src('app/fonts/**/*')
 var buildJs = gulp.src('app/js/**/*')
 .pipe(gulp.dest('dist/js'));
 
-var buildHtml = gulp.src('app/*.html')
-.pipe(gulp.dest('dist/'));
+// var buildHtml = gulp.src('app/*.html')
+// .pipe(gulp.dest('dist/'));
 
 var buildhtml5shiv = gulp.src('app/libs/html5shiv/**/*')
 .pipe(gulp.dest('dist/libs/html5shiv'));

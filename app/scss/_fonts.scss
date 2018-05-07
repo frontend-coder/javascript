@@ -1,32 +1,20 @@
 @import '_var.scss';
-//  font-family: "Ubuntu", sans-serif;
+
+/* font-family: "OswaldBold"; */
 @font-face {
-	font-family: "Ubuntu";
-	src: url("../fonts/UbuntuRegular/UbuntuRegular.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/UbuntuRegular/UbuntuRegular.woff") format("woff"),
-	url("../fonts/UbuntuRegular/UbuntuRegular.ttf") format("truetype");
+	font-family: "RobotoRegular";
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+	url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
-
+/* font-family: "RobotoRegular"; */
 @font-face {
-	font-family: "UbuntuLight";
-	src: url("../fonts/UbuntuLight/UbuntuLight.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/UbuntuLight/UbuntuLight.woff") format("woff"),
-	url("../fonts/UbuntuLight/UbuntuLight.ttf") format("truetype");
+	font-family: "RobotoMedium";
+	src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"),
+	url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
-
-@font-face {
-	font-family: "UbuntuLightItalic";
-	src: url("../fonts/UbuntuLightItalic/UbuntuLightItalic?#iefix")format("embedded-opentype"),
-	url("../fonts/UbuntuLightItalic/UbuntuLightItalic.woff") format("woff"),
-	url("../fonts/UbuntuLightItalic/UbuntuLightItalic.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}
-
-
-
-

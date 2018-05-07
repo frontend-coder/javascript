@@ -1,239 +1,349 @@
 @charset "UTF-8";
-/*все переменные и моды */
 *::-webkit-input-placeholder {
-  color: #666;
+  color: #202020;
   opacity: 1; }
 
 *:-moz-placeholder {
-  color: #666;
+  color: #202020;
   opacity: 1; }
 
 *::-moz-placeholder {
-  color: #666;
+  color: #202020;
   opacity: 1; }
 
 *:-ms-input-placeholder {
-  color: #666;
+  color: #202020;
   opacity: 1; }
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0; }
 
 html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
+  /* height: 100%; */
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.42;
   margin: 0;
   padding: 0;
-  -webkit-backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden;
+  /* overflow-x: hidden; */ }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "RobotoRegular", sans-serif;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.42;
   position: relative;
-  color: #666;
+  min-width: 320px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  opacity: 1;
   -webkit-backface-visibility: hidden;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialised; }
+  -webkit-font-smoothing: antialised;
+  overflow-x: hidden; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
 a {
-  outline: 0; }
+  outline: 0;
+  text-decoration: none; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
+.img-responsive {
+  display: block;
+  width: 100%;
+  height: auto; }
 
 .hidden {
   display: none; }
 
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
 /*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+/* font-family: "OswaldBold"; */
 @font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/UbuntuRegular/UbuntuRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/UbuntuRegular/UbuntuRegular.woff") format("woff"), url("../fonts/UbuntuRegular/UbuntuRegular.ttf") format("truetype");
+  font-family: "RobotoRegular";
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
+/* font-family: "RobotoRegular"; */
 @font-face {
-  font-family: "UbuntuLight";
-  src: url("../fonts/UbuntuLight/UbuntuLight.eot?#iefix") format("embedded-opentype"), url("../fonts/UbuntuLight/UbuntuLight.woff") format("woff"), url("../fonts/UbuntuLight/UbuntuLight.ttf") format("truetype");
+  font-family: "RobotoMedium";
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"), url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
-@font-face {
-  font-family: "UbuntuLightItalic";
-  src: url("../fonts/UbuntuLightItalic/UbuntuLightItalic?#iefix") format("embedded-opentype"), url("../fonts/UbuntuLightItalic/UbuntuLightItalic.woff") format("woff"), url("../fonts/UbuntuLightItalic/UbuntuLightItalic.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal; }
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
 
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
 /*все переменные и моды */
-h2 {
-  font-size: 1.625rem;
-  line-height: 1.3;
-  text-transform: uppercase; }
-
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
 .header_img {
-  background: #000 url("../images/header-pic.png") center center no-repeat;
-  min-height: 678px;
-  /* background-attachment: fixed; */
+  background: #000 url("../images/header-fon_655.jpg") center center no-repeat;
+  min-height: 655px;
   -webkit-background-size: cover;
-  -ms-background-size: cover;
-  background-size: cover;
-  position: relative; }
+          background-size: cover; }
 
-.header_img:before {
-  position: absolute;
-  content: '';
-  background-color: rgba(0, 0, 0, 0.9);
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
+.top_line {
+  background-color: #fff;
+  height: 100px;
   width: 100%;
-  height: 100%; }
-
-.top-line {
-  width: 100%;
-  z-index: 200;
   position: fixed;
-  padding: 10px 0;
-  background-color: black;
-  text-align: center; }
+  z-index: 100;
+  -webkit-box-shadow: 1px 1px 1px #95989A;
+          box-shadow: 1px 1px 1px #95989A; }
 
-.top-box {
-  position: relative;
+.top_line_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.top_line_logo {
   color: #fff; }
 
-.top-box a {
-  color: #fff;
+.top_line_menu {
   padding: 0;
   margin: 0; }
 
-.logo {
-  float: left;
-  width: 211px;
-  height: 36px; }
+.top_line_menu ul li {
+  display: inline-block; }
 
-.logo img {
-  width: 100%;
-  height: auto; }
-
-.top-line-call {
-  margin-top: 11px;
-  color: #fff;
-  text-align: center;
-  font-size: 0.95rem;
-  padding: 0; }
-
-.top-line-call a {
-  display: inline-block;
-  padding: 7px 3px;
-  width: 200px;
-  font-weight: 700;
-  font-size: 16px;
-  color: #fff;
-  margin: 0;
-  border: 2px solid #fff;
+.top_line_menu ul li a {
+  font-family: "RobotoMedium", sans-serif;
+  display: block;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
+  color: #000;
+  padding: 10px;
+  /*  // font-size: $size; */
+  font-size: 1.25rem;
+  line-height: 1.2;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
-.top-line-call a:hover {
-  background-color: #efa448; }
+.top_line_menu ul li a:hover {
+  color: #FF8941; }
 
-.top-menu {
-  float: right; }
+.top_line_phone ul li {
+  margin-bottom: 2px;
+  font-size: 0.9rem;
+  font-weight: 600; }
 
-.top-menu ul {
-  padding: 0;
-  list-style-type: none;
-  font-size: 0;
-  margin: 0; }
+.top_line_phone ul li:nth-child(2) {
+  margin-bottom: 5px; }
 
-.top-menu ul li {
-  display: inline-block;
-  margin: 0;
-  padding: 0; }
-
-.top-menu ul li a {
-  text-align: center;
-  font-size: 0.9375rem;
-  line-height: 1;
-  display: block;
-  padding: 15px 18px;
-  border: 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
+.top_line_phone ul li a {
+  color: #FF8941;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
+  transition: all 0.2s ease;
+  /*  // font-size: $size; */
+  font-size: 1.5rem;
+  /*   font-weight: 600; */ }
 
-.top-menu ul li a:hover {
-  color: #efa448; }
+.top_line_phone ul li a:hover {
+  color: #FB6C14; }
 
-.top-menu ul li.active a {
-  color: #efa448; }
-
-/*оформление 2 меню для адаптива*/
-.hidden-mnu {
-  background-color: rgba(0, 0, 0, 0.8);
-  display: block;
-  top: 64px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 10000;
+/*  оформление мобильной версии меню и гамбургера */
+.mobile_gamburger {
   display: none; }
 
-.hidden-mnu ul {
-  margin: 0;
-  padding: 0; }
+.mobile_gamburger {
+  width: 50px;
+  height: 50px;
+  display: none;
+  z-index: 100; }
 
-.hidden-mnu ul li {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 0; }
-
-.hidden-mnu ul li a {
-  display: block;
-  text-align: center;
-  line-height: 1.5;
-  padding: 20px 0;
-  margin: 0;
-  color: #fff; }
-
-.hidden-mnu ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff; }
-
-/*начало оформления кнопки  меню для адаптива*/
 .toggle-mnu {
   display: block;
-  float: right;
-  color: #fff;
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  /*   float:right;
+position:absolute;
+right:10px;top:0; */
   text-align: center;
-  line-height: 48px;
-  display: none;
-  width: 28px;
-  height: 28px;
-  margin-top: 20px;
-  margin-right: 15px;
-  display: none; }
+  line-height: 48px; }
+
+.toggle-mnu {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-top: 15px;
+  margin-right: 0; }
 
 .toggle-mnu span:after, .toggle-mnu span:before {
   content: "";
@@ -250,15 +360,15 @@ h2 {
 
 .toggle-mnu span, .toggle-mnu span:after, .toggle-mnu span:before {
   width: 100%;
-  height: 2px;
-  background-color: #fff;
+  height: 3px;
+  background-color: #000;
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-border-radius: 2px;
-  border-radius: 2px; }
+          backface-visibility: hidden;
+  -webkit-border-radius: 3px;
+          border-radius: 3px; }
 
 .toggle-mnu.on span {
   background-color: transparent; }
@@ -277,254 +387,869 @@ h2 {
   opacity: 1;
   visibility: visible; }
 
-/* оформление содержимого над самой нартикой ниже top line */
-.title-header {
+/*
+стили оформления контента в хедере
+*/
+.header_content {
+  padding: 15% 0; }
+
+.header_content_item {
   width: 70%;
-  padding: 7% 0 6%;
-  color: #000; }
-
-.title-header h4 {
-  font-size: 30px;
-  display: inline-block;
-  padding: 2px 75px;
-  border: 2px solid #fff; }
-
-.title-header p {
-  font-size: 22px;
-  line-height: 1.5;
   margin: 0;
-  padding: 0; }
+  float: left; }
 
-.title-header h1 {
-  font-size: 70px;
-  line-height: 56px;
-  text-align: left;
-  letter-spacing: 1px;
-  margin-left: 0;
-  color: #fff; }
+.header_content_item:last-child {
+  width: 30%; }
 
-.title-header h1 span {
-  font-size: 68px;
-  font-weight: 300; }
+.header_cover {
+  background-color: rgba(255, 137, 65, 0.75);
+  padding-top: 15px;
+  padding-bottom: 45px;
+  padding-left: 10px;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 83% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 83% 0, 100% 100%, 0 100%); }
 
-.title-header h3 {
-  font-size: 20px;
-  line-height: 1.8;
+.header_title h1 {
+  /*  // font-size: $size; */
+  font-size: 4.375rem;
+  font-weight: 100;
   text-transform: uppercase;
-  margin-bottom: 0;
-  margin-top: 40px;
-  margin-left: 0;
-  text-align: left; }
-
-.title-header h3 span {
   color: #fff;
-  font-weight: 900; }
+  line-height: 1;
+  font-family: "RobotoRegular", sans-serif;
+  text-shadow: 1px 1px 1px #95989A; }
 
-.calling-me {
-  margin-top: 86px; }
+.header_title h1 span {
+  display: block;
+  /*  // font-size: $size; */
+  font-size: 2.8125rem;
+  font-family: "RobotoRegular", sans-serif;
+  font-weight: normal;
+  text-transform: none; }
 
-.calling-me ul li {
-  display: inline-block; }
+.header_descr {
+  margin-top: 10px;
+  color: #000;
+  /*  // font-size: $size; */
+  font-size: 1.5625rem; }
 
-.calling-me a {
-  display: inline-block;
-  border: 3px solid #fff;
-  color: #fff;
-  padding: 10px 30px;
-  font-size: 18px;
+.header_descr span {
+  font-weight: 400;
+  /*  // font-size: $size; */
+  font-size: 2.1875rem;
   text-transform: uppercase;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  text-decoration: none;
-  font-weight: 300; }
+  font-weight: 700; }
 
-.calling-me a:last-child {
-  margin-left: 10px; }
+.header_termes {
+  margin-top: 10px;
+  /*  // font-size: $size; */
+  font-size: 0.75rem; }
 
-.calling-me a:hover {
-  background-color: #efa448;
-  padding: 10px 30px;
-  border: 3px solid transparent; }
+.big_form_box {
+  padding: 0;
+  margin: 0;
+  padding-top: 212px; }
 
-/* оформление содержимого над самой нартикой ниже top line */
-.block_padding {
-  height: 1000px; }
+.form_fon {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 5px;
+  padding-top: 70px;
+  position: relative; }
 
-.block_yellow {
-  background-color: yellow; }
-
-.block_black {
-  background-color: black; }
-
-.block_orange {
-  background-color: orange; }
-
-.block_blue {
-  background-color: blue; }
-
-/*все переменные и моды */
-.first {
-  margin-bottom: 70px;
-  padding: 10px; }
-
-#second {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px; }
-
-.block, .b_lock {
-  margin: 20px 10px;
-  padding: 10px; }
-
-.b_p {
-  padding: 70px 20px; }
-
-.list {
-  margin: 0 20px 30px 20px; }
-
-.list li {
-  padding: 14px 0; }
-
-.chet, .ind, .headere {
-  margin: 20px 10px;
-  color: red; }
-
-.block_black {
-  color: #fff; }
-
-.block_black h5 {
-  margin-top: 40px; }
-
-.f_ch_ul, .conch {
-  margin: 20px 30px; }
-
-.forma-test {
-  width: 568px;
+.form_fon:before {
+  content: '';
+  position: absolute;
+  bottom: 71.75%;
+  background: transparent url("../images/women.png") center center no-repeat;
+  width: 293px;
+  height: 302px;
   margin: 0 auto; }
 
+.top_mnu,
+.hidden-mnu {
+  display: none; }
+
+.select {
+  margin-bottom: 10px; }
+
+.our_form {
+  display: block;
+  width: 100%;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  padding-right: 1.875rem;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  -webkit-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.our_form:hover {
+  background-color: #f9f9f9; }
+
+/*
+оформление чекбокса в форме за счет картинки которая лежит в папке
+images
+*/
+.checkbox_box_master {
+  margin-top: 10px;
+  width: 100%;
+  height: 25px;
+  /*   background-color : red; */ }
+
+.checkbox_box {
+  margin: 0 auto;
+  width: 46%;
+  padding: 0;
+  height: 25px;
+  /*   background-color: #000fff; */
+  color: #cbcaca; }
+
+.checkbox {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px; }
+
+.checkbox input[type="checkbox"] {
+  margin-left: 0;
+  padding: 0; }
+
+.checkbox input[type="checkbox"].css-checkbox {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0px;
+  border: 0; }
+
+.checkbox input[type="checkbox"].css-checkbox + label.css-label {
+  background-image: url("../images/checkbox_yes.png");
+  padding-left: 22px;
+  display: block;
+  line-height: 17px;
+  background-repeat: no-repeat;
+  font-size: 13px;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 1;
+  color: #cbcaca; }
+
+.checkbox input[type="checkbox"].css-checkbox + label.css-label:hover {
+  opacity: 1.0; }
+
+.checkbox input[type="checkbox"]:checked + label.css-label {
+  background-image: url("../images/checkbox_no.png"); }
+
+.css-label a {
+  color: #cbcaca;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.css-label a:hover {
+  color: #b2b0b0; }
+
+.calculator_box_item .checkbox input[type="checkbox"].css-checkbox + label.css-label {
+  color: #868686; }
+
+.calculator_box_item .css-label a {
+  color: #868686;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.calculator_box_item .css-label a:hover {
+  color: #6d6d6d; }
+
+.calculator_rest_box {
+  padding: 0;
+  margin: 0; }
+
+.calculator_rest_box_left {
+  float: left;
+  width: 80%;
+  line-height: 1.125; }
+
+.calculator_rest_box_right {
+  float: right;
+  width: 20%;
+  font-size: 3.875rem;
+  line-height: 0.8;
+  color: #d4d4d4;
+  color: #ffcc00;
+  text-shadow: 1px 1px 1px #000; }
+
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
 /*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+/* оформление содержимого шаблона, которое находится под
+header */
+.block {
+  padding: 60px 0; }
+
+.title_block {
+  /*  // font-size: $size; */
+  font-size: 1.875rem;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase; }
+
+.title_block_descr {
+  /*  // font-size: $size; */
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.53;
+  border-bottom: 1px solid #eee; }
+
+.cont_title {
+  color: red; }
+
+.padding_block {
+  height: 200px;
+  background-color: red; }
+
+.block_h {
+  height: 300px; }
+
+.grey_block {
+  background-color: grey; }
+
+.blue_block {
+  background-color: blue; }
+
+.Aqua_block {
+  background-color: Aqua; }
+
+.BlueViolet_block {
+  background-color: BlueViolet; }
+
+.Chocolate_block {
+  background-color: Chocolate; }
+
+.b_w {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.submit_bb {
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: transparent;
+  border: 3px solid #fff;
+  color: #000;
+  margin-bottom: 50px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 9px 33px;
+  -webkit-box-shadow: 1px 1px 1px #95989A;
+          box-shadow: 1px 1px 1px #95989A;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.submit_bb:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+/*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+/*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+/* стили формы обратной связи */
 /* стили формы обратной связи */
 .forms-call {
-  font-size: .875em; }
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  overflow: hidden; }
+
+.form_fon_title {
+  color: #fff;
+  text-align: center;
+  /*  // font-size: $size; */
+  font-size: 1.5625rem; }
+
+.form_fon_title span {
+  text-transform: uppercase;
+  color: #FF8941; }
 
 .forms-call label {
   margin: 10px 0;
   display: block; }
 
-.forms-call input {
+.input_form {
   display: block;
-  width: 100%;
-  height: 60px;
-  font-size: 0.938em;
+  width: 90%;
+  margin: 10px auto 0;
+  height: 40px;
+  /*  // font-size: $size; */
+  font-size: 1.25rem;
   line-height: 40px;
-  border: 1px solid #000;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  color: #000;
+  border: 1px solid #95989A;
   text-indent: 10px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.input-border {
+  border: 1px solid #E5722C; }
+
+.input_form:focus,
+.input_form:hover {
+  border: 1px solid #95989A;
+  border-bottom: 1px solid #FF8941; }
+
+.input-border:focus,
+.input-border:hover {
+  border: 1px solid #E5722C;
+  border-bottom: 1px solid #FF8941; }
+
+.submit {
+  display: block;
+  width: 90%;
+  margin: 10px auto 0;
+  height: 40px;
+  line-height: 40px;
+  /* 	font-weight: bold; */
+  background-color: #FF8941;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.submit:hover {
+  background-color: #FB6C14; }
+
+.form_info {
+  color: #7E7E7E;
+  width: 80%;
+  margin: 20px auto;
+  /*  // font-size: $size; */
+  font-size: 0.75rem; }
+
+.checkbox_box {
   margin: 10px auto;
+  width: 90%;
+  padding: 0;
+  color: #fff; }
+
+.big_form_case .checkbox_box {
+  margin: 10px auto;
+  width: 38%; }
+
+.radioterms {
+  width: 10%;
+  float: left;
+  margin-top: 10px; }
+
+.link_form {
+  float: right;
+  color: #95989A;
+  width: 87%;
+  top: -6px;
+  /*  // font-size: $size; */
+  font-size: 0.625rem;
+  position: relative; }
+
+.link_form:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  border-bottom: 1px dashed #95989A;
+  top: 112%;
+  width: 78%; }
+
+.form_fon_mphone .link_form:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  border-bottom: 1px dashed #95989A;
+  top: 112%;
+  width: 58%; }
+
+.link_form a {
+  color: #95989A;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.link_form a:hover .link_form:before {
+  border-bottom: 1px dashed #fff; }
+
+.big_form_case .link_form a {
+  color: #ffffff; }
+
+.big_form_case .link_form:before {
+  border-bottom: 1px dashed #ffffff;
+  width: 81%; }
+
+.form_fon_mphone .form_fon_title {
+  margin-bottom: 15px; }
+
+.form_fon_mphone .form_fon_title,
+.form_fon_mphone .form_fon_title span {
   color: #000; }
 
-.forms-call input:focus {
-  border: 1px solid #f05d72; }
+.form_fon_mphone .link_form a:hover {
+  color: #95989A; }
 
-.forms-call .get-buttons {
-  margin: 10px 0;
-  background-color: #efa448;
-  padding: 4px 50px;
-  line-height: 50px;
-  font-size: 18px;
-  text-decoration: none;
-  border: 0;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-
-.button-call {
-  text-align: right;
-  margin: 0;
-  float: right; }
-
-.forms-call .get-buttons:focus,
-.forms-call .get-buttons:hover,
-.forms-call .get-buttons:active {
-  background-color: #eb8d19; }
-
-/* конец формы обратной связи */
-/*оформление всплывающей формы а ниже и благодарности */
-.forms-calldecor {
-  max-width: 480px;
+/*
+стилизую форму всплывашку для обратной связи */
+.form-callback {
+  max-width: 750px;
+  overflow: hidden;
+  padding: 20px;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.99);
-  -webkit-transition: all 0.5s ease;
+  /* 	background-color:$color_button; */
   -webkit-transition: all 0.5s else;
   -o-transition: all 0.5s else;
   transition: all 0.5s else;
-  overflow: hidden;
-  margin: auto;
-  border: 1px solid #fff;
-  -webkit-border-radius: 10px;
-          border-radius: 10px; }
+  margin: auto; }
 
-.forms-calldecor img {
-  width: 100%;
-  height: auto; }
+.form-callback_iner {
+  background-color: #FF8941;
+  padding-top: 20px; }
 
-.forms-calldecor h4 {
-  color: #000;
+.form-callback h4 {
+  /* color: $button-hover; */
   text-align: center;
-  font-size: 30px;
-  margin: 30px 0 40px 0; }
+  margin-bottom: 30px;
+  /*  // font-size: $size; */
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.23333;
+  margin-bottom: 20px; }
 
-.forms-calldecor input {
-  width: 90%;
-  color: #333333; }
+.form-callback h5 {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  /*  // font-size: $size; */
+  font-size: 1.5625rem;
+  line-height: 1.2;
+  color: #000;
+  font-weight: normal; }
 
-.forms-calldecor .button-call {
+.fcb {
+  margin: 0;
+  padding: 0;
+  background-color: #FF8941; }
+
+.form-callback_item {
+  float: right;
+  margin-top: -1px;
+  padding-top: 15px;
+  width: 50%;
+  /* 	background-color:$color_button; */ }
+
+.b_item {
+  float: left;
+  width: 50%;
+  margin: 20px auto 0;
+  height: 261px;
+  text-align: center;
+  background: #FF8941 url("../images/septik-ergobox_327.png") center center no-repeat;
+  -webkit-background-size: 286px 261px;
+          background-size: 286px 261px; }
+
+.form-callback_item .input_form {
+  color: #95989A;
+  font-size: 0.95rem; }
+
+.label_name {
+  margin-left: 5%; }
+
+.form-callback .button-call {
   float: none;
   text-align: center;
   color: #fff;
-  margin-bottom: 20px; }
+  margin-top: 20px; }
 
-.forms-calldecor .mfp-close {
+.form-callback .link_form a {
+  color: #fff; }
+
+.form-callback .link_form:before {
+  border-bottom: 1px dashed #fff;
+  width: 75%; }
+
+/*
+стилизую кнопки закрытия формы */
+.forms-call .mfp-close {
   position: absolute;
-  right: 15px;
-  font-size: 30px;
-  top: 15px;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  top: 4px;
+  right: 4px;
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  /*  // font-size: $size; */
+  font-size: 1.875rem;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #95989A;
+  border: 1px solid #fff;
   -webkit-transition: all .75s ease;
   -o-transition: all .75s ease;
   transition: all .75s ease; }
 
-.forms-calldecor .mfp-close:hover {
-  color: red;
-  -moz-transform: rotate(45deg);
-  /* Firefox */
-  -o-transform: rotate(45deg);
-  /* Opera */
-  -webkit-transform: rotate(45deg);
-  /* Safari y Chrome */
-  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476);
-  /* IE */ }
+.forms-call .mfp-close:hover {
+  color: #1a1a1a; }
 
-.forms-calldecor .mfp-close-btn-in .mfp-close {
-  color: #fff;
-  font-size: 22.5em;
+/*
+стили оформления всплывашки политика кон */
+.politiks_popup {
+  background-color: transparent;
+  padding: 15px;
+  position: relative;
+  -webkit-transition: all 0.5s else;
+  -o-transition: all 0.5s else;
+  transition: all 0.5s else;
+  color: #000;
+  max-width: 750px;
+  margin: auto; }
+
+.politiks_popup_block {
+  padding: 10px;
+  background-color: #fff; }
+
+.politiks_popup_block h4 {
+  /*  // font-size: $size; */
+  font-size: 1.25rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+.politiks_popup_block h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 10px;
+  padding-bottom: 5px; }
+
+.politiks_popup_block p {
+  /*  // font-size: $size; */
+  font-size: 0.875rem; }
+
+.politiks_popup_block ul {
+  padding: 0 0 0 10px;
   font-weight: bold;
-  -webkit-border-radius: 3px;
-          border-radius: 3px; }
+  /*  // font-size: $size; */
+  font-size: 1rem;
+  padding-bottom: 5px; }
 
-.mfp-bg {
-  background: #fff; }
+.politiks_popup_block ul li {
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  font-weight: normal;
+  /*  // font-size: $size; */
+  font-size: 0.875rem; }
+
+.politiks_popup_block ul li ul li {
+  list-style-type: disc; }
+
+.politiks_popup_block ul li span {
+  font-weight: bold; }
+
+.fc-avtorpolit {
+  text-align: right;
+  font-size: 1rem; }
+
+.fc-avtorpolit a,
+.politiks_popup_block ul li a {
+  color: #FF9900;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.politiks_popup_block ul li a:hover,
+.politiks_popup_block a:hover {
+  text-decoration: underline; }
+
+.politiks_popup_block .mfp-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 0;
+  width: 30px;
+  font-size: 30px;
+  height: 30px;
+  line-height: 23px;
+  opacity: .7;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #FF7800;
+  -webkit-transition: all 0.5s ease 0.1s;
+  -o-transition: all 0.5s ease 0.1s;
+  transition: all 0.5s ease 0.1s; }
+
+.politiks_popup_block .mfp-close:hover {
+  opacity: 1.0; }
+
+/* // переписать */
+.forms-calldecor {
+  position: relative; }
 
 .forms-calldecor .success {
   color: #fff;
-  background-color: #7cc15a;
+  background-color: #FF8941;
   position: absolute;
   z-index: 1;
   left: 0;
+  z-index: 1100;
   top: -100%;
   width: 100%;
   height: 100%;
@@ -548,9 +1273,9 @@ h2 {
   opacity: 0;
   padding-right: 20px;
   padding-left: 20px;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  -webkit-transition: all 3.0s ease;
+  -o-transition: all 3.0s ease;
+  transition: all 3.0s ease; }
 
 .forms-calldecor .success.active {
   top: 0;
@@ -570,6 +1295,7 @@ h2 {
   margin: auto;
   text-align: center; }
 
+/* // долюно работать анимация всплывашки */
 /* overlay at start */
 .mfp-fade.mfp-bg {
   opacity: 0;
@@ -606,74 +1332,248 @@ h2 {
   -ms-transform: translateY(-120%);
   transform: translateY(-120%); }
 
+.footer_fob {
+  width: 100%; }
+
+:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+:focus::-moz-placeholder {
+  color: transparent; }
+
+:focus:-moz-placeholder {
+  color: transparent; }
+
+:focus:-ms-input-placeholder {
+  color: transparent; }
+
+/* :-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:focus::-webkit-input-placeholder {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus::-moz-placeholder          {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus:-moz-placeholder           {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus:-ms-input-placeholder      {text-indent: 110%; transition: text-indent 0.3s ease;} */
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
 /*все переменные и моды */
-@media only screen and (max-width: 1190px) {
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+@media (min-width: 737px) {
   .container {
-    width: 1170px; } }
+    width: 100%;
+    margin: 0 auto; } }
 
-@media screen and (max-width: 1080px) {
+@media (min-width: 768px) {
   .container {
-    width: 1060px; }
-  .logo {
-    width: 185px; } }
+    width: 750px;
+    margin: 0 auto; } }
 
-@media only screen and (max-width: 1024px) {
+@media (min-width: 800px) {
   .container {
-    width: 1004px; }
-  .logo {
-    margin-top: 8px;
-    width: 128px; } }
+    width: 780px;
+    margin: 0 auto; } }
 
-@media only screen and (max-width: 992px) {
+@media (min-width: 992px) {
   .container {
-    width: 970px; }
-  .top-menu ul {
-    display: none; }
-  .toggle-mnu {
-    display: block; } }
+    width: 970px;
+    margin: 0 auto; } }
 
-@media only screen and (max-width: 800px) {
+@media (min-width: 1024px) {
   .container {
-    width: 780px; } }
+    width: 1004px;
+    margin: 0 auto; } }
 
+@media screen and (min-width: 1080px) {
+  .container {
+    width: 1060px;
+    margin: 0 auto; } }
+
+@media only screen and (min-width: 1190px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto; } }
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto; } }
+
+/* ниже размещено стили оформления наполнения шаблона в
+зависимостиь от разрешения, в документ были вклюены все разрешения
+не зависомо от требования заказчика  */
+/* первое разрешение под казачика */
 @media only screen and (max-width: 768px) {
-  .container {
-    width: 750px; } }
+  .mobile_gamburger {
+    display: block; }
+  .top_line_menu {
+    display: none; }
+  .header_content_item {
+    width: 100%;
+    float: none; }
+  .header_img:before {
+    display: none; }
+  .header_content_item:last-child {
+    width: 100%; }
+  /*конец оформления кнопки  меню*/
+  .top_mnu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 40, 38, 0.8);
+    z-index: 50;
+    right: 0;
+    top: -100%;
+    /* display: flex;
+justify-content: center;
+align-items: center; */ }
+  /* .top_mnu.active {
+top: 0;
+} */
+  .top_mnu ul {
+    /*   margin-top: 120px; */
+    text-align: center;
+    width: 100%; }
+  .top_mnu ul li {
+    margin: 0;
+    padding: 0; }
+  .top_mnu ul li a {
+    display: block;
+    font-family: "RobotoMedium", sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    padding: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .top_mnu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #FF8941; }
+  /*оформление скрытого меню*/
+  .hidden-mnu {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    min-width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1; }
+  .hidden-mnu ul {
+    margin: 0;
+    padding: 0; }
+  .hidden-mnu ul li {
+    display: block;
+    margin: 0;
+    padding: 0; }
+  .hidden-mnu ul li a {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.5;
+    padding: 20px 0;
+    color: #fff;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .hidden-mnu ul li a:hover {
+    /* background-color:rgba(40, 40, 38, 0.60); */
+    color: #FF8941; }
+  .top_line_box, .top_line {
+    height: 80px; }
+  /*Disable Animation on Mobile Devices*/
+  .animated {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    animation: none !important; } }
 
-@media only screen and (max-width: 667px) {
-  .container {
-    width: 647px; } }
-
-@media only screen and (max-width: 640px) {
-  .container {
-    width: 620px; } }
-
-@media only screen and (max-width: 600px) {
-  .container {
-    width: 580px; } }
-
-@media only screen and (max-width: 568px) {
-  .container {
-    width: 548px; } }
-
-@media only screen and (max-width: 480px) {
-  .container {
-    width: 460px; } }
-
-@media only screen and (max-width: 425px) {
-  .container {
-    width: 405px; } }
-
-@media only screen and (max-width: 384px) {
-  .container {
-    width: 364px; } }
-
-@media only screen and (max-width: 360px) {
-  .container {
-    width: 340px; } }
-
-@media only screen and (max-width: 320px) {
-  .container {
-    width: 310px; } }
+/* end  (max-width: 768px) */
 
 /*# sourceMappingURL=main.min.css.map */
