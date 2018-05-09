@@ -1,19 +1,25 @@
 <?php
 
 $recepient = "frontendercode@gmail.com";
-$sitename  = "Сайт https://frontend-coder.github.io/";
-$subject   = "Заказ с сайта https://frontend-coder.github.io/";
+$sitename  = "Сайт http://proekt-vodoley.ru/";
+$subject   = "Заказ с сайта http://proekt-vodoley.ru/";
 
-$name = trim($_POST["name"]);
-$email = trim($_POST["email"]);
+$typeadukation = trim($_POST["typeadukation"]);
+$typecity = trim($_POST["typecity"]);
+$typemans = trim($_POST["typemans"]);
+$phone = trim($_POST["phone"]);
+
 $formaone = trim($_POST["formaone"]);
+
 $admindata = trim($_POST["admin-data"]);
 
 $message = "
-С какого сайта пришло сообщение: $sitename  <br>
-Место размещения формы в шаблоне: $formaone  <br>
-Место размещения во всплывающей форме: $admindata  <br>
-Имя обратившегося: $name  <br>
+тип мероприятия: $typeadukation  <br>
+Место проведения: $typecity  <br>
+Количеств мест в группе: $typemans  <br>
+Телефон обратившегося: $phone  <br>
+Форма размещена в калькуляторе $admindata <br>
+Номер калькулятора на странице $formaone <br>
 Почтовый ящик клиента: $email";
 
 $pagetitle = "Новая заявка с сайта \"$sitename\"";

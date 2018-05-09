@@ -13,22 +13,24 @@
          <html lang="ru">
          <!--<![endif]-->
          <head>
-          <meta charset="utf-8" />
-          <title>Чистый стартовый шаблон для сборки рабочих проектов с помощью Gulp</title>
-          <meta name="description" content="" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <link rel="shortcut icon" href="images/favicon/favicon.png" />
-          <!-- 3 нижние строки Chrome, Firefox OS and Opera; Windows Phone; iOS Safari    -->
-          <meta name="theme-color" content="#000">
-          <meta name="msapplication-navbutton-color" content="#000">
-          <meta name="apple-mobile-web-app-status-bar-style" content="#000">
-          <style>
-          html {background-color: #fff; }
-          body { opacity: 0; overflow-x: hidden;}
-        </style>
-        <link rel="stylesheet" href="css/libs.min.css" />
-        <link rel="stylesheet" href="css/main.min.css" />
+          <div>
+            <meta charset="utf-8" />
+            <title>Чистый стартовый шаблон для сборки рабочих проектов с помощью Gulp</title>
+            <meta name="description" content="" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="shortcut icon" href="images/favicon/favicon.png" />
+            <!-- 3 нижние строки Chrome, Firefox OS and Opera; Windows Phone; iOS Safari    -->
+            <meta name="theme-color" content="#000">
+            <meta name="msapplication-navbutton-color" content="#000">
+            <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+            <style>
+            html {background-color: #fff; }
+            body { opacity: 0; overflow-x: hidden;}
+                    </style>
+                    <link rel="stylesheet" href="css/libs.min.css" />
+                    <link rel="stylesheet" href="css/main.min.css" />
+          </div>
       </head>
       <body>
        <header class="header_img">
@@ -251,7 +253,7 @@
 
           <form id="calc_f" class="forms-calldecor">
             <input type="hidden" name="admin-data" value="форма размещена в калькуляторе">
-            <input type="hidden" name="formaone" value="форма не размещена во всплывающем окне">
+            <input type="hidden" name="formaone" value="Второй калькулятор на странице">
             <div class="success">
               <p>Спасибо за заявку</p>
             </div>
@@ -260,14 +262,14 @@
                 <div class="calculator_item_yell">
                   <div class="calculator_item_title">Вы хотите организовать:</div>
                   <div class="calculator_item_text">
-                    <span id="typemerop_two">.....</span>, место проведения
-                    <span id="country_merop_two">......</span>. Ориентировочное количество
-                    <span id="persons_quntity_two">......</span>
+                    <span id="select_one_bissness">.....</span>, место проведения
+                    <span id="select_two_country">......</span>. Ориентировочное количество
+                    <span id="select_three_persons">......</span>
                   </div>
                   <div class="calculator_item_idea">у меня для вас есть
-                    <span id="idea_quntity">305 идей</span>
+                    <span id="two_calculate_idea">305 идей</span>
                   </div>
-                  <div class="calculator_idea_button">
+                  <div class="calculator_idea_button calculator_idea_neactive">
                     <button data-form="заказ услуги из калькулятора" data-text="Расчитать стоимость мероприятия">
                       узнать варианты</button>
                   </div>
@@ -284,8 +286,8 @@
                   </select>
                 </div>
 
-                <div class="select">
-                  <select id="select_two" class="custom-select" name="typecity">
+                <div class="select ooo">
+                  <select id="select_two" class="custom-select " name="typecity">
                     <option value="Москва и МО">Москва и МО</option>
                     <option value="Россия">Россия</option>
                     <option value="Страны СНГ">Страны СНГ</option>
@@ -295,9 +297,8 @@
                   </select>
                 </div>
 
-                <div class="select">
-                  <select id="select_three" class="custom-select" name="typemans" onchange="funquantity()">
-                    <option hidden>Сколько человек</option>
+                <div class="select ooo2">
+                  <select id="select_three" class="custom-select ooo" name="typemans">
                     <option value="1 человек">1 человек</option>
                     <option value="2 человека">2 человека</option>
                     <option value="от 3 до 5 ">от 3 до 5 человек</option>
@@ -307,13 +308,13 @@
                   </select>
                 </div>
 
-        <input id="phone_calculthree" class="our_form" type="text" name="phone" onchange="funphone()" required="required"  />
+        <input id="phone_calculaitethree" class="our_form ooo3" type="text" name="phone" required="required"  />
+
                 <div class="checkbox_box_master">
                   <div class="checkbox_box">
                     <div class="checkbox custom">
                       <input id="phone_cvalky" class="css-checkbox" type="checkbox" />
                       <label for="phone_cvalky" class="css-label">Я даю согласие на обработку своих персональных данных и ознакомлен с
-                        <a href="/politics.html">политикой конфиденциальности</a>
                       </label>
                     </div>
                   </div>
@@ -383,6 +384,9 @@
 </section>
 
 
+<section class="padding_block">
+
+</section>
 
 
 
@@ -395,10 +399,76 @@
 
      <section class="block block_h grey_block">
       <div class="container">
+        <h2 class="title_block">Изучаю Javascript: 2 блок</h2>
+
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-6">
+ <form id="calc_f" class="forms-calldecor">
+            <input type="hidden" name="admin-data" value="форма размещена в калькуляторе">
+            <input type="hidden" name="formaone" value="форма не размещена во всплывающем окне">
+
+             <div class="checkbox_box_master">
+                  <div class="checkbox_box">
+                    <div class="checkbox custom">
+                      <input id="calculate_checkboxone" class="css-checkbox" type="checkbox" />
+                      <label for="calculate_checkboxone" class="css-label">Нужен ли выполнить прототип проекта  </label>
+                    </div>
+                  </div>
+                </div>
+           <div class="checkbox_box_master">
+                  <div class="checkbox_box">
+                    <div class="checkbox custom">
+                      <input id="calculate_checkboxtwo" class="css-checkbox" type="checkbox" />
+                      <label for="calculate_checkboxtwo" class="css-label">Нужно ли выполнить макет проекта в формате PSD
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+           <div class="checkbox_box_master">
+                  <div class="checkbox_box">
+                    <div class="checkbox custom">
+                      <input id="calculate_checkboxtree" class="css-checkbox" type="checkbox" />
+                      <label for="calculate_checkboxtree" class="css-label">Нужно ли выполнить обыную вестку макета
+                      </label>
+                    </div>
+                  </div>
+                </div>
+           <div class="checkbox_box_master">
+                  <div class="checkbox_box">
+                    <div class="checkbox custom">
+                      <input id="calculate_checkboxfoure" class="css-checkbox" type="checkbox" />
+                      <label for="calculate_checkboxfoure" class="css-label">Нужно ли выполнить адаптивную вестку макета
+                      </label>
+                    </div>
+                  </div>
+                </div>
+           <div class="checkbox_box_master">
+                  <div class="checkbox_box">
+                    <div class="checkbox custom">
+                      <input id="calculate_checkboxfive" class="css-checkbox" type="checkbox" />
+                      <label for="calculate_checkboxfive" class="css-label">Нужно ли выполнить посадку верстки на Wordpress
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+
+</form>
+
+
+
 
           </div>
+       <div class="col-md-6">
+
+
+
+
+
+          </div>
+
+
         </div>
       </div>
     </section>

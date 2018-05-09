@@ -32,6 +32,7 @@ $(function() {
 	$("#phone_calcul").mask("+7(000)000-00-00", {placeholder: "+7(___)___-__-__",clearIfNotMatch: true});
 	$("#phone_calcultwo").mask("+7(000)000-00-00", {placeholder: "+7(___)___-__-__",clearIfNotMatch: true});
 	$("#phone_calculthree").mask("+7(000)000-00-00", {placeholder: "+7(___)___-__-__",clearIfNotMatch: true});
+	$("#phone_calculaitethree").mask("+7(000)000-00-00", {placeholder: "+7(___)___-__-__",clearIfNotMatch: true});
 
 });
 
@@ -168,20 +169,53 @@ $('#select_three').customSelect({
 
 // Програмирование второго калькулятора услуг
 
+//пишу второй калькутор услуг
 
+// $("#select_one").onСhange(function(){
 
+// var selectuing_one, options, select_onerezult;
+//  selectuing_one = document.getElementById('select_one').selectedIndex;
+// options = document.getElementById('select_one').options;
+// select_onerezult = (options[selectuing_one].text);
+// document.getElementById("select_one_bissness").innerHTML = select_oneresult;
+// });
 
+$("#select_one").change(function () {
+  var str = "";
+  $( "#select_one option:selected" ).each(function() {
+     str += $( this ).text() + " ";
+   });
+   $( "#select_one_bissness" ).text( str );
+  }).change();
 
+$("#select_two").change(function () {
+  var str = "";
+  $( "#select_two option:selected" ).each(function() {
+     str += $( this ).text() + " ";
+   });
+   $( "#select_two_country" ).text( str );
+  }).change();
 
+$("#select_three").change(function () {
+  var str = "";
+  $( "#select_three option:selected" ).each(function() {
+     str += $( this ).text() + " ";
+   });
+   $( "#select_three_persons" ).text( str );
+  }).change();
 
-
-
-
-
-
-
-
-
+$("#select_one").change(function () {
+$(".ooo .custom-select__option").addClass("active");
+});
+$("#select_two").change(function () {
+$(".ooo2 .custom-select__option").addClass("active");
+});
+$("#select_three").change(function () {
+$(".ooo3").addClass("active");
+});
+$("#phone_calculaitethree").change(function () {
+$(".calculator_idea_neactive").addClass("active");
+});
 // сщздание обьекта
 
 var obj = {
