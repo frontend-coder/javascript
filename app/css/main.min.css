@@ -497,6 +497,43 @@ right:10px;top:0; */
 оформление чекбокса в форме за счет картинки которая лежит в папке
 images
 */
+.price_box_inn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+
+.price_box_inn_left {
+  width: 70%; }
+
+.price_box_inn_right {
+  width: 30%; }
+
+#wrapblock {
+  font-size: 20px;
+  color: red; }
+
+.f_q {
+  font-size: 20px;
+  color: red;
+  padding: 30px 20px; }
+
+.f_q1 {
+  margin-bottom: 20px; }
+
+.f_q2 {
+  display: block;
+  color: black; }
+
+.simpleel p {
+  margin-bottom: 10px; }
+
+/* {
+  counter-reset: item;
+
+}
+ */
 .checkbox_box_master {
   margin-top: 10px;
   width: 100%;
@@ -755,11 +792,6 @@ header */
 .calculator_idea_neactive button {
   cursor: pointer; }
 
-/*
-// , .calculator_idea_neactive button
-,
-.calculator_idea_neactive.active
-*/
 .calculator_idea_neactive {
   margin-bottom: 20px;
   margin-top: 20px; }
@@ -771,6 +803,29 @@ header */
   text-transform: uppercase;
   background-color: #fff; }
 
+.simpleel_list {
+  margin-left: 20px; }
+
+.simpleel_list li {
+  padding: 5px 0;
+  list-style-type: decimal !important; }
+
+.develo {
+  display: none; }
+
+.visibl {
+  visibility: visible; }
+
+.mouse_text_b button {
+  padding: 20px 10px;
+  font-size: 20px; }
+
+/* .form_input input {
+border:2px solid red;
+color:red;
+padding: 5px 15px 5px 15px;
+
+} */
 /* // задать все переменные
  */
 /* p {

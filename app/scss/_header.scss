@@ -246,6 +246,49 @@ padding-right: 1.875rem;
 images
 */
 
+.price_box_inn {
+display: flex;
+width: 100%;
+}
+.price_box_inn_left {
+width: 70%;
+
+}
+.price_box_inn_right {
+width: 30%;
+
+}
+
+#wrapblock  {
+font-size: 20px;
+color: red;
+
+}
+.f_q {
+font-size: 20px;
+color: red;
+padding: 30px 20px;
+
+}
+.f_q1 {
+  margin-bottom: 20px;
+}
+.f_q2 {
+  display: block;
+  color: black;
+}
+.simpleel p {
+  margin-bottom: 10px;
+}
+
+/* {
+  counter-reset: item;
+
+}
+ */
+
+
+
 .checkbox_box_master {
   margin-top: 10px;
   width: 100%;
