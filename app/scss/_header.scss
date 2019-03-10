@@ -142,14 +142,12 @@ top:9px;
 }
 
 .header_content_item {
-  width: 70%;
+  width: 100%;
   margin:0;
-  float: left;
+
 }
 
-.header_content_item:last-child {
-  width: 30%;
-}
+
 
 .header_cover {
    background-color: rgba(255, 137, 65, 0.75);
