@@ -1,3 +1,5 @@
+/* jshint browser:true, jquery:true */
+
 @import '_var.scss';
 
 /* оформление содержимого шаблона, которое находится под
@@ -5,6 +7,21 @@ header */
 .block {
 	padding: 60px 0;
 }
+
+.flex_cont {
+	display: flex;
+	border:1px solid red;
+}
+
+.flex_cont_int {
+	background-color: blue;
+border:3px solid orange;
+margin: 10px;
+color:#fff;
+}
+
+
+
 
 .title_block {
 	@include font-size(30px);
@@ -68,11 +85,36 @@ header */
 
 }
 
+.ol_list li {
+	position: relative;
+	padding-left: 50px;
+}
+
+.ol_list li:before {
+	position: absolute;
+	top: 0;
+	content: '';
+	left: -1px;
+}
+
+
+.ol_list li {
+	list-style: upper-roman outside;
+}
+
 .test_block_items {
 	width: 31%;
 	margin-right: 2%;
 }
-
+#how_do {
+	color:red;
+}
+#how_do_white {
+	color:#fff;
+}
+.red {
+	color:red;
+}
 .test_block_items:nth-child(3n+3) {
 	margin-right: 0;
 }
@@ -81,7 +123,9 @@ header */
 	border-top: 1px solid red;
 }
 
-
+// #stroken_one::before {
+// 	content: 'ghbc';
+// }
 
 .b_w {
 	padding-left: 10px;

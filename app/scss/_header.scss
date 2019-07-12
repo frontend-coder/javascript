@@ -9,22 +9,25 @@
 
 .top_line {
   background-color: $white_color;
-  height: 100px;
+ // background-color: red;
   width: 100%;
+  padding: 0;
   position: fixed;
   z-index: 100;
     box-shadow: 1px 1px 1px #95989A;
 }
 
 .top_line_box {
+  padding: 10px 0 10px;
   display: flex;
-  height: 100px;
+  border:1px solid red;
   align-items: center;
   justify-content: space-between;
 }
 
 .top_line_logo {
   color: #fff;
+ // background-color: red;
 }
 
 .top_line_menu {
@@ -35,13 +38,15 @@
   display: inline-block;
 }
 .top_line_menu ul li a {
+  margin: 0;
+  border:1px solid red;
     font-family: "RobotoMedium", sans-serif;
   display: block;
   text-transform: uppercase;
   color: #000;
  padding: 10px;
  @include font-size(20px);
-  line-height:(24px / 20px);
+ // line-height:(24px / 20px);
   @include trans;
 
 }
@@ -50,13 +55,13 @@
 color: $color_button;
 }
 .top_line_phone ul li {
-  margin-bottom: 2px;
+// margin-bottom: 2px;
 font-size: 0.9rem;
   font-weight: 600;
 
 }
 .top_line_phone ul li:nth-child(2) {
-  margin-bottom: 5px;
+//  margin-bottom: 5px;
 }
 .top_line_phone ul li a {
   color:$color_button;
