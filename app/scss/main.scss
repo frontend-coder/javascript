@@ -138,6 +138,25 @@ li {
 @import "header";
 @import "allstyle";
 
+
+
+/* оформление содержимого шаблона, которое находится под
+header */
+.block {
+	padding: 60px 0;
+}
+
+.flex_cont {
+	display: flex;
+	border:1px solid red;
+}
+
+
+
+
+
+
+
 // @import '_basicstyle.scss';
 //  @import '_vseforms.scss';
 

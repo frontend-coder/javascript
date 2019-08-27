@@ -1,0 +1,15 @@
+{
+	"folders": [],
+	"settings": {
+		"CSSNavigation.activeCSSFileExtensions": [
+			"css",
+			"scss"
+		],
+		"CSSNavigation.activeHTMLFileExtensions": [
+			"html",
+			"php",
+			"js"
+		],
+		"emmet.triggerExpansionOnTab": true
+	}
+}

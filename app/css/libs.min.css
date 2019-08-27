@@ -1038,6 +1038,28 @@ padding: 5px 15px 5px 15px;
   border-top: 1px solid #000;
 }
 
+#keybord_out {
+  padding: 0;
+}
+
+#keybord_out_two {
+  padding: 0;
+}
+
+/* оформление содержимого шаблона, которое находится под
+header */
+.block {
+  padding: 60px 0;
+}
+
+.flex_cont {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid red;
+}
+
 /* // задать все переменные
  */
 /* p {

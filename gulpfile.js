@@ -50,7 +50,9 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', done => {
 	var jsFiles = [
+'app/libs/javascripttrein.js',
 'app/libs/common.js'
+
 // Always at the end
 ];
 return gulp.src(jsFiles)

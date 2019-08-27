@@ -8,17 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frontend-coder/startgulp4Lite.git"
+    "url": "git+https://github.com/frontend-coder/javascript.git"
   },
   "author": "Олег Василенко",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/frontend-coder/startgulp4Lite/issues"
+    "url": "https://github.com/frontend-coder/javascript/issues"
   },
-  "homepage": "https://github.com/frontend-coder/startgulp4Lite#readme",
+  "homepage": "https://github.com/frontend-coder/javascript#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
@@ -32,6 +36,22 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
+    "prettier": "^1.18.2",
     "vinyl-ftp": "^0.6.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base", "prettier"
+    ],
+     "globals": {
+    "window": "true",
+       "document": "true"
+  },
+         "rules":{
+         "func-names": "off"
+      }
+
+
+
   }
 }

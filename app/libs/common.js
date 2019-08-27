@@ -28,7 +28,7 @@ document.querySelector('.nothing_title').outerText = '<h4 class="nothing_title">
 // Тонкая работа по замене содержимого или мультивставка
 
 let tochVstavka = document.querySelector('.braike_title_span');
-console.log = (tochVstavka);
+//console.log = (tochVstavka);
 
 //tochVstavka.insertAdjacentHTML('beforebegin', 'юефобегин' );
 
@@ -61,7 +61,7 @@ document.querySelector('#fiest_img').src = newAsressImg;
 //console.log(document.querySelector('link').href);
 //console.log('kjk');
 const iiei = 5;
-console.info(iiei);
+//console.info(iiei);
 
 //document.querySelector('link').href="style2.css";
 //linkStyle = 'style2.css';
@@ -77,12 +77,12 @@ document.querySelector('title').innerText = "Я мучу Javascript - это н�
 
   let myTextBold = 'Привет, я первая строка по Джаваскрипт';
   let myTextBoldInTo = '';
-  console.info(myTextBoldInTo);
+ // console.info(myTextBoldInTo);
   myTextBoldInTo = document.getElementById('my_text_bold');
   //myTextBoldInTo.innerHTML = 'Привет, я первая строка по Джаваскрипт';
 
   myTextBoldInTo.innerHTML = myTextBold;
-  console.info(myTextBoldInTo);
+ // console.info(myTextBoldInTo);
   //myTextBoldInTo.css('border','1px solid red');
 
 
@@ -274,7 +274,7 @@ document.querySelector('#get_number_test').innerText = 'Вы угадали чи
   let randomNumber = Math.random();
   randomNumber = randomNumber * 10;
   randomNumber = Math.round(randomNumber); // округление до целого числа
-  console.info(randomNumber);
+ // console.info(randomNumber);
 
   let inputNumber = document.querySelector('#number_past');
   document.querySelector('#number_submit').onclick = checkNumber;
