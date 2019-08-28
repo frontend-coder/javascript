@@ -10,37 +10,41 @@ header */
 
 .flex_cont {
 	display: flex;
-	border:1px solid red;
+	border : 1px solid red;
 }
 
 .flex_cont_int {
 	background-color: blue;
-border:3px solid orange;
-margin: 10px;
-color:#fff;
+	border          : 3px solid orange;
+	margin          : 10px;
+	color           : #fff;
 }
 // .novotest_submit {
 // 	line-height: 30px;
 // }
+#mindecte {
+	padding: 0;
+	margin : 0;
+}
+
 
 
 
 .title_block {
 	@include font-size(30px);
-	text-align: center;
-	margin-bottom: 10px;
+	text-align    : center;
+	margin-bottom : 10px;
 	text-transform: uppercase;
 }
 
 .title_block_descr {
 	@include font-size(16px);
-	text-align: left;
-	margin-bottom: 20px;
+	text-align    : left;
+	margin-bottom : 20px;
 	text-transform: uppercase;
-	font-weight: normal;
-	line-height: 1.53;
-	border-bottom: 1px solid #eee;
-
+	font-weight   : normal;
+	line-height   : 1.53;
+	border-bottom : 1px solid #eee;
 }
 
 .cont_title {
@@ -48,7 +52,7 @@ color:#fff;
 }
 
 .padding_block {
-	height: 200px;
+	height          : 200px;
 	background-color: red;
 }
 
@@ -79,24 +83,24 @@ color:#fff;
 }
 
 .test_block_cl {
-	padding: 0;
-	margin: 0;
-	display: flex;
+	padding        : 0;
+	margin         : 0;
+	display        : flex;
 	justify-content: flex-start;
-	flex-wrap: wrap;
+	flex-wrap      : wrap;
 
 }
 
 .ol_list li {
-	position: relative;
+	position    : relative;
 	padding-left: 50px;
 }
 
 .ol_list li:before {
 	position: absolute;
-	top: 0;
-	content: '';
-	left: -1px;
+	top     : 0;
+	content : '';
+	left    : -1px;
 }
 
 
@@ -105,17 +109,17 @@ color:#fff;
 }
 
 .test_block_items {
-	width: 31%;
+	width       : 31%;
 	margin-right: 2%;
 }
 #how_do {
-	color:red;
+	color: red;
 }
 #how_do_white {
-	color:#fff;
+	color: #fff;
 }
 .red {
-	color:red;
+	color: red;
 }
 .test_block_items:nth-child(3n+3) {
 	margin-right: 0;
@@ -130,25 +134,25 @@ color:#fff;
 // }
 
 .b_w {
-	padding-left: 10px;
+	padding-left : 10px;
 	padding-right: 10px;
 }
 
 
 .submit_bb {
-	text-transform: uppercase;
-	display: block;
-	margin: 0 auto;
-	text-align: center;
+	text-transform  : uppercase;
+	display         : block;
+	margin          : 0 auto;
+	text-align      : center;
 	background-color: transparent;
-	border: 3px solid #fff;
-	color: #000;
-	margin-bottom: 50px;
-	cursor: pointer;
-	font-size: 1.4rem;
-	padding: 9px 33px;
-	box-shadow: 1px 1px 1px #95989A;
-	margin-bottom: 10px;
+	border          : 3px solid #fff;
+	color           : #000;
+	margin-bottom   : 50px;
+	cursor          : pointer;
+	font-size       : 1.4rem;
+	padding         : 9px 33px;
+	box-shadow      : 1px 1px 1px #95989A;
+	margin-bottom   : 10px;
 	@include trans;
 }
 
@@ -177,14 +181,14 @@ color:#fff;
 
 .calculator_idea_neactive {
 	margin-bottom: 20px;
-	margin-top: 20px;
+	margin-top   : 20px;
 }
 
 .calculator_idea_neactive button {
-	padding: 20px 30px;
-	color: #000;
-	border: 1px solid #000;
-	text-transform: uppercase;
+	padding         : 20px 30px;
+	color           : #000;
+	border          : 1px solid #000;
+	text-transform  : uppercase;
 	background-color: #fff;
 }
 
@@ -193,7 +197,7 @@ color:#fff;
 }
 
 .simpleel_list li {
-	padding: 5px 0;
+	padding        : 5px 0;
 	list-style-type: decimal !important;
 }
 
@@ -206,7 +210,7 @@ color:#fff;
 }
 
 .mouse_text_b button {
-	padding: 20px 10px;
+	padding  : 20px 10px;
 	font-size: 20px;
 }
 
@@ -217,8 +221,8 @@ color:#fff;
 
 
 /* .form_input input {
-border:2px solid red;
-color:red;
+border : 2px solid red;
+color  : red;
 padding: 5px 15px 5px 15px;
 
 } */
@@ -233,3 +237,11 @@ padding: 5px 15px 5px 15px;
 	padding: 0;
 }
 #keybord_out_two {padding: 0;}
+
+
+.doble {
+}
+.doble_fix {
+}
+
+

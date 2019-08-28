@@ -1,8 +1,88 @@
 
 
+
+
+/* простой калькулятор  */
+
+
+const calculateDate = document.querySelector('.calculate_date');
+const calculateDateSpan = document.querySelector('.calculate_date span');
+const calculateDateInput = document.querySelector('.calculate_date input');
+
+
+
+calculateDateSpan.style.display = 'block';
+calculateDateSpan.style.marginBottom = '5px';
+
+calculateDate.style.marginBottom = '5px';
+
+calculateDateInput.style.height = '40px';
+calculateDateInput.style.textIndent = '10px';
+calculateDateInput.style.lineHeight = '40px';
+
+
+document.querySelector('#simple_button');
+
+
+function simpleResulting() {
+  const simpleWidth = document.querySelector('#simple_width').value;
+  const simpleHeight = document.querySelector('#simple_height').value;
+  const simpleDeep = document.querySelector('#simple_deep').value;
+  let costDevelop;
+  let costFilter;
+
+  if (document.querySelector('#simple_develop').checked) {
+    costDevelop = 12333;
+  } else {
+    costDevelop = 0;
+  }
+
+  if (document.querySelector('#simple_costfilter').checked) {
+    costFilter = 33000;
+  } else {
+    costFilter = 0;
+  }
+  let simpleRadioValue;
+  let simpleRadioValueCost;
+  const simpleRadio = document.querySelectorAll('.calculate_radio');
+
+
+  for (let i = 0; i < simpleRadio.length; i += 1) {
+
+    if (simpleRadio[i].checked) {
+      simpleRadioValue = simpleRadio[i].value;
+    }
+    if (simpleRadioValue === 'Круглая') {
+      simpleRadioValueCost = 3000;
+    } else if (simpleRadioValue === 'Овальная') {
+      simpleRadioValueCost = 4000;
+    } else if (simpleRadioValue === 'Прямоугольная') {
+      simpleRadioValueCost = 5000;
+    } else {
+      simpleRadioValueCost = 1000;
+    }
+  }
+  const simpleResult = (simpleWidth * simpleHeight * simpleDeep) + costDevelop + costFilter + simpleRadioValueCost;
+  const simpleResultFinal = simpleResult.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+
+  //  allSumm.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+
+  document.querySelector('#simple_result').innerHTML = simpleResultFinal;
+}
+
+
+document.querySelector('#simple_button').onclick = simpleResulting;
+
+
+
+
+
+
+
+
 /* вычисляю циклы    */
-
-
 const cycleOne = 20;
 /* t++ на t += 1 */
 
@@ -15,13 +95,9 @@ for (let l = 0; l <= cycleOne; l += 1) {
 }
 
 
+const leto = 5;
 
-
-
-
-
-
-
+const letoResult = 6 + leto;
 
 const foterPersy = 30;
 if (foterPersy) {

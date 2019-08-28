@@ -838,6 +838,11 @@ header */
   color: #fff;
 }
 
+#mindecte {
+  padding: 0;
+  margin: 0;
+}
+
 .title_block {
   /*  // font-size: $size; */
   font-size: 1.875rem;
@@ -1029,8 +1034,8 @@ header */
 }
 
 /* .form_input input {
-border:2px solid red;
-color:red;
+border : 2px solid red;
+color  : red;
 padding: 5px 15px 5px 15px;
 
 } */
