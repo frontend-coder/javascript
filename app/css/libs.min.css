@@ -737,6 +737,56 @@ images
   text-shadow: 1px 1px 1px #000;
 }
 
+.class_name {
+  background-color: #611B14;
+}
+
+body, html {
+  position: relative;
+}
+
+.modal_wrap {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  position: fixed;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal_window {
+  width: 320px;
+  height: 320px;
+  background-color: #fff;
+  z-index: 1200;
+}
+
+.block_2 {
+  padding: 0;
+  margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.no_scroll {
+  overflow: hidden;
+}
+
 /* jshint browser:true, jquery:true */
 /* // задать все переменные
  */

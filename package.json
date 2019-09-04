@@ -41,17 +41,17 @@
   },
   "eslintConfig": {
     "extends": [
-      "airbnb-base", "prettier"
+      "airbnb-base",
+      "prettier"
     ],
-     "globals": {
-    "window": "true",
-       "document": "true"
-  },
-         "rules":{
-         "func-names": "off"
-      }
-
-
-
+    "globals": {
+      "window": "true",
+      "document": "true"
+    },
+    "rules": {
+      "allowForLoopAfterthoughts": "off",
+      "func-names": "off",
+      "strict": "off"
+    }
   }
 }

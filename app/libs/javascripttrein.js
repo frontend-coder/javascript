@@ -62,7 +62,27 @@ function simpleResulting() {
       simpleRadioValueCost = 1000;
     }
   }
-  const simpleResult = (simpleWidth * simpleHeight * simpleDeep) + costDevelop + costFilter + simpleRadioValueCost;
+
+  let selectValue;
+  let selectValueCost;
+  const simpleSelect = document.querySelectorAll('#select_position option');
+  for (let i = 0; i < simpleSelect.length; i += 1) {
+    if (simpleSelect[i].selected) {
+      selectValue = simpleSelect[i].value;
+      selectValueCost = Number(simpleSelect[i].value);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  const simpleResult = (simpleWidth * simpleHeight * simpleDeep) + costDevelop + costFilter + simpleRadioValueCost + selectValueCost;
   const simpleResultFinal = simpleResult.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
 
