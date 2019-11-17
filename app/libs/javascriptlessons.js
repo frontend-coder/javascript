@@ -5,7 +5,3 @@
 var projectOne = 34;
 var resultOne = projectOne + 345;
 var resultOne = resultOne * 'строка для документов';
-
-'use strict';
-
-var kkjj;

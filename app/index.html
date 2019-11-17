@@ -1,1969 +1,554 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Учу Javascript с самого начала и до 3-х приложений</title>
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/libs.min.css" />
 
-<head>
+    <link rel="shortcut icon" href="favicon.ico" />
 
-  <meta charset="utf-8" />
-  <title>Учу Javascript с самого начала и до 3-х приложений</title>
-  <meta name="description" content="" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/libs.min.css" />
-
-  <link rel="shortcut icon" href="favicon.ico" />
-
-  <!-- 3 нижние строки Chrome, Firefox OS and Opera; Windows Phone; iOS Safari    -->
-  <meta name="theme-color" content="#000">
-  <meta name="msapplication-navbutton-color" content="#000">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
-  <!--     <style>
+    <!-- 3 нижние строки Chrome, Firefox OS and Opera; Windows Phone; iOS Safari    -->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--     <style>
       html {background-color: #fff; }
             body { opacity: 0; overflow-x: hidden;}
                     </style> -->
+  </head>
 
-</head>
+  <body>
+    <header class="header_img">
+      <div class="top_line">
+        <div class="container">
+          <div class="row">
+            <div class="top_line_box">
+              <div class="top_line_logo">
+                <img
+                  class="img-responsive"
+                  src="images/logo-dark.jpg"
+                  alt="логотип магазина"
+                />
+              </div>
 
-<body>
-
-
-
-  <div class="modal_wrap hide" id="sign-in">
-
-    <div class="modal_window">
-      <button class="modal_close">
-        закрыть
-      </button>
-      Типа контент модального окнаТипа контент модального окнаТипа контент модального окнаТипа контент модального
-      окнаТипа контент модального окнаТипа контент модального окна
-      Типа контент модального окна
-      <button class="modal_close">
-        закрыть
-      </button>
-    </div>
-
-  </div>
-
-
-
-  <header class="header_img">
-
-    <div class="top_line">
+              <div class="top_line_phone">
+                <ul>
+                  <li><a href="skype:webrabcom?chat">Webrabcom</a></li>
+                  <li>
+                    <a href="tg://resolve?domain=frontendcoder"
+                      >Telegram: @frontendcoder</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="mobile_gamburger">
+                <a href="#" class="toggle-mnu">
+                  <span></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--start hidden-mnu -->
+        <div class="col-sm-12 col-xs-12 col-md-12">
+          <div class="top-menu hidden-mnu hidden-lg clearfix">
+            <ul>
+              <li><a href="#catalog">каталог</a></li>
+              <li><a href="#video">видео</a></li>
+              <li><a href="#consultation">консультации</a></li>
+              <li><a href="#adwiceme">отзывы</a></li>
+              <li><a href="#contacts">контакты</a></li>
+            </ul>
+          </div>
+          <!--end hidden-mnu -->
+        </div>
+      </div>
       <div class="container">
         <div class="row">
-          <div class="top_line_box">
-            <div class="top_line_logo">
-              <img class="img-responsive" src="images/logo-dark.jpg" alt="логотип магазина">
-            </div>
-            <div class="top_line_menu">
-              <ul>
-                <li><a href="#calculate_block">Калькулятор</a></li>
-                <li><a href="#video">1 блок</a></li>
-                <li><a href="#consultation">2 блок</a></li>
-                <li><a href="#adwiceme">3 блок</a></li>
-                <li><a href="#contacts">4 блок</a></li>
-              </ul>
-
-            </div>
-            <div class="top_line_phone">
-              <ul>
-                <li><a href="skype:webrabcom?chat">Webrabcom</a></li>
-                <li><a href="tg://resolve?domain=frontendcoder">Telegram: @frontendcoder</a></li>
-              </ul>
-            </div>
-            <div class="mobile_gamburger">
-              <a href="#" class="toggle-mnu">
-                <span></span>
-              </a>
+          <div class="header_content">
+            <div class="header_content_item">
+              <div class="header_cover">
+                <div class="header_title">
+                  <h1>Учу javascript <span>c нуля до Vuejs!</span></h1>
+                </div>
+                <div class="header_descr">
+                  выучи язык * <span>- переселись в Канаду!</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!--start hidden-mnu -->
-      <div class="col-sm-12 col-xs-12 col-md-12">
-        <div class="top-menu hidden-mnu hidden-lg clearfix">
+    </header>
+
+    <!-- https://js2.itgid.info/
+https://js2.itgid.info/unit?unit=if-else
+https://js2.itgid.info/lessons -->
+
+    <section class="block">
+      <div class="container">
+        <h2>3. Оператор if, else, switch case - выбор в javascript</h2>
+        <div class="row">
           <ul>
-            <li><a href="#catalog">каталог</a></li>
-            <li><a href="#video">видео</a></li>
-            <li><a href="#consultation">консультации</a></li>
-            <li><a href="#adwiceme">отзывы</a></li>
-            <li><a href="#contacts">контакты</a></li>
+            <li>
+              Task 1. При нажатии кнопки b-1 срабатывает функция f1. Функция
+              должна прочитать содержимое i-1 и сравнить его с числом 4
+              (сравнение ==). Результат сравнения - true или false выведите в
+              out-1.</li>
+              <li> Task 2. Даны две переменные a21 и a22. При нажатии кнопки
+              b-2, запускается функция f2. Функция должна сравнить переменные с
+              помощью if else и вывести в out-2 число, которое больше. Вариант
+              равенства переменных не рассматриваем.</li>
+              <li> Task 3. Даны 2 input - i-31
+              и i-32, оба - input[type=number]. При нажатии кнопки b-3
+              срабатывает функция f3. Функция должна вычитать содержимое i-31 и
+              i-32 в переменные и сравнить их, вывести в out-3 большее число.
+              Проведите самостоятельный тест работы, введите пары чисел 4 и 9, 9
+              и 22, 5 и 111.</li>
+              <li> Task 4. Создайте на странице input[type=number] с
+              классом i-4, куда пользователь может ввести год своего рождения.
+              Есть кнопка b-4 которая запускает функцию f4. Функция должна
+              вывести в .out-4 число 1 если пользователю больше или равно 18
+              лет, и 0 если меньше.</li>
+              <li> Task 5. Создайте на странице
+              input[type=number] с классом i-5, куда пользователь может ввести
+              число. Есть кнопка b-5 которая запускает функцию f5. Функция
+              должна вывести в .out-5 символ m если число меньше нуля, 0 если
+              число равно нулю и 1 если больше.</li>
+              <li> Task 6. Xxxxxxxx xx xxxxxxxx
+              input[type=number] x xxxxxxx i-6, xxxx xxxxxxxxxxxx xxxxx xxxxxx
+              xxxxx. Xxxx xxxxxx b-6 xxxxxxx xxxxxxxxx xxxxxxx f6. Xxxxxxx
+              xxxxxx xxxxxxx x .out-6 xxxxx even xxxx xxxxx xxxxxx x odd xxxx
+              xxxxxxxx. Xxx xxxxxxxx xxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxxx xxxxxxx
+              xx xxxxxxx xx 2 (xxxxxxxx %). Xxxx xxxxxxx xxxxx xxxx - xxxxxx,
+              xxx - xxxxxxxx.</li>
+              <li> Task 7. Xxxx 2 input - i-71 x i-72, xxx -
+              input[type=number]. Xxx xxxxxxx xxxxxx b-7 xxxxxxxxxxx xxxxxxx f7.
+              Xxxxxxx xxxxxx xxxxx xx i-71 xxxxxxxx x xxxxxxx i-72, xxxxxxx
+              xxxxxxxxx x out-7. Xxx xxxxxxxxxx x xxxxxxx xxxxx xxxxxxxxxxxx **,
+              xxx Math.pow.</li>
+              <li> Task 8. Xxx select s-8, xxxxxxx xxxxxxxx 3 xxxxxxxx:
+              1, 2, 3. Xxxx xxxxxx b-8. Xxx xx xxxxxxx xxxxxxxxxxx xxxxxxx f8.
+              Xxxxxxx xxxxxx xxxxxxxx xxxxxxxxx x select xxxxx, xxxxx x xxxxxxx
+              switch case xxxxxxxx xxx xxxxxxxxxx x ‘1’, ‘2’, ‘3’. X xxxx xxxxx
+              xxxxxxx - 1, xx xxxxxxx x out-8 xxxxxx one, xxxx 2 - two, xxxx 3 -
+              three.</li>
+              <li> Task 9. Xxxxxxxx xx xxxxxxxx input[type=number] x xxxxxxx
+              i-9, xxxx xxxxxxxxxxxx xxxxx xxxxxx xxxxx xxxxxxxx. Xxxx xxxxxx
+              b-9 xxxxxxx xxxxxxxxx xxxxxxx f9. Xxxxxxx xxxxxx xxxxxxx x .out-9
+              xxxxx xxxxxxxx, x xxxxxxx xxxxxxxxx xxxxxxxx. xxxx xx 1 xx 32 - xx
+              xxxxxxx xxxxx 1 xxxx xx 33 xx 43 - xx xxxxxxx 2 xxxx xx 44 xx 64 -
+              xx 3. X xxxxxxxxx xxxxxx, xxxxxxx 0. Task 10. Xxx input i-101 x
+              input-102, type=number. Xxx select s-103, xxxxxxx xxxxxxxx xxx
+              xxxxxxxx - +, -, *, / . Xxxx xxxxxx b-10, xxx xxxxxxx xx xxxxxxx
+              xxxxxxxxxxx xxxxxxx f10. Xxxxxxx xxxxxxx x out-10 xxxxxxxxx
+              xxxxxxxx xxxxxxxxx x 3-x select x xxxxxx xxxxxxxxx x xxxxxx x
+              xxxxxx input. Xxxxxxxx xxxxxxx 1 13 +, xxxxx xxxxxxx xxxxxxxxx
+              xxxxxxxxxx xxxxxxxx x xxxxxx. X.x. 1+2 xxxxx xxxxxxx 3.</li>
+              <li> Task 11.
+              Xxx select s-111 x s-112, xxxxxx xx xxxxxxx xxxxxxxx 1 x 0. Xxx
+              select s-113, xxxxxxx xxxxxxxx xxx xxxxxxxx - && x || . Xxxx
+              xxxxxx b-11, xxx xxxxxxx xx xxxxxxx xxxxxxxxxxx xxxxxxx f11.
+              Xxxxxxx xxxxxxx x out-11 xxxxxxxxx xxxxxxxxxx xxxxxxxx xxxxxxxxx x
+              3 select x xxxxxx xxxxxxxxx x xxxxxx x xxxxxx select. Xxxxxxxx
+              xxxxxxx 1 1 &&, xxxxx xxxxxxx xxxxxxxxx xxxxxxxx xxx xxxxxxxxxx
+              xxxxxxx x xxxxxx. X.x. xxxx xxxxxxx 1&&0 - xx xxxxxxx 0, xxxx 1||1
+              xx 1. Задачи на прокачку Полный доступ ко всем задачам - после
+              приобретения курса.</li>
+              <li> Task 1. Создайте переменную a = 4. Используя
+              конструкцию if проверьте что a == 4. Выведите сообщение в консоль.</li>
+              <li>Task 2. Создайте b = 8 и с = 10. С помощью if, else выведите в
+              консоль сообщение о том, какая из переменных больше. Task 3.
+              Xxxxxxxxx else if xxxxxxxx x xxxxxxxxxx xxxxxx xxxxxxxx xx
+              xxxxxxxxx.</li>
+              <li> Task 4. Создайте на странице 2 input, куда пользователь
+              может вводить числа. Добавьте кнопку. При нажатии кнопки
+              выполняйте функцию, которая сравнит два числа и выведет большее на
+              страницу. Если числа равны - выводится строка "равны".</li>
+              <li> Task 5.
+              Создайте на странице input, куда пользователь может вводить год
+              рождения. Добавьте кнопку. При нажатии кнопки выполняйте функцию,
+              которая если год рождения меньше 2000 выводит на страницу возраст
+              пользователя (2019 - введенный год рождения), если год рождения
+              больше или равен 2000 - выводит в консоль возраст пользователя.</li>
+              <li>Task 6. Xxxxxxxx input xxxx xxxxxxxxxxxx xxxxx xxxxxx xxxxx
+              xxxxxxxx. Xxxx xxxxxxxx xx 1 xx 32 - xx xxxxxxxx xxxxxxxxx, x xxx,
+              xxx xxxxx xxxxxxxx xxxx,xxxx xxxxxx xxxxx - xxxxxxxxx x xxx, xxx
+              xxxxxxxx xx xxxxxxxxxx.</li>
+              <li> Task 7. Создайте input куда пользователь
+              может ввести число. После нажатия кнопки - на страницу должно
+              выводиться сообщение - большие или меньше нуля это число.</li>
+              <li> Task 8.
+              Создайте input куда пользователь может ввести число. После нажатия
+              кнопки - на страницу должно выводиться сообщение - четное или нет
+              это число. Определить четное или нет число в JS очень просто.
+              Нужно получить целый остаток от деления (читать за оператор), для
+              этого используется оператор % . И проверить. Если остаток от
+              деления 0 - то число четное, если нет - не четное.</li>
+              <li> Task 9.
+              Xxxxxxxx 2 xxxxxx. Xxxx xxx xxxxxx xxxxxxxxx (xx xxxxx xxxxxx
+              xxxxxx), xx xx xxxxxxx xxxxxx xxxxx xx xxxxxxx xxxxxx xxxxxxxxx x
+              xxxxxxx xx xxxxxxx input. Xxxxxxxxx xxxxxxxx xx xxxxxxxx. Xxx
+              xxxxxxxx x xxxxxxx? Xxxxxx!</li>
+              <li> Task 10. Есть поле input куда
+              пользователь может ввести свое имя. Нужно при нажатии кнопки -
+              сказать с помощью alert('Hello имя_пользователя'), но хитрые
+              пользователи часто нажимают несколько раз пробел. Вроде ничего и
+              не ввел, но программа считывает пробелы и пытается работать.
+              Напишите проверку, которая выводит предупреждение если
+              пользователь ничего не ввел, или ввел один пробел. В остальных
+              случаях - Hello...</li>
+              <li>Task 11. Хитрый пользователь научился обходить
+              нашу предыдущую задачу, и начал вводить где 3, а где и 5 пробелов.
+              Напишите программу, которая проверяет пробелы или нет введены в
+              строку. Как защититься от пробелов? Обрезать их. Допустим вы
+              получили значение из input в переменную a. Теперь напишите a =
+              a.trim(); - это обрежет пробелы и результат запишет в переменную
+              a. Теперь просто сравните переменную a c пустой строкой. Если она
+              равна - выведите ошибку, если нет - сообщение с содержимым input.</li>
+              <li>Task 12. Xxxxxxxxxxxx xxxxx xxxxxx xxxxx xx 1 xx 3. Xxxx
+              xxxxxxxxxxxx xxxx 1 - xx x xxxxxxx xxxxxxxx xxxxx "xxxx" x x.x.
+              Xxx xxxxxxx xxxxxxxxxxx switch.</li>
+              <li> Task 13. Пользователь может ввести
+              номер дома. Если дом от 1 до 5 - то улица 1, если от 6 до 11 -
+              улица 2, если от 11 до 20 - улица 3. Используя if, elseif -
+              реализуйте программу, которая будет указывать улицу в зависимости
+              от введенного дома.
+            </li>
+
+            <li>
+              Task 14. Создайте input куда пользователь может ввести количество
+              рентген. Это число от 0 и до 1000. С помощью if, else if
+              реализуйте вывод по таблице: от 0 до 25 - не обнаруживается до 50
+              - снижение числа лимфоцитов до 100 - вялость, рвота, до 150 -
+              смертность 5%, до 350 - смертность 50% за 30 суток, до 600 - 90%
+              смертность за 2 недели. Больше 600 - смертность 100%. Вывод
+              результатов сделайте на страницу.
+            </li>
+
+            <li>
+              Task 15. Xxxxxxxx xxxxxxxxxx x = 1, y = 0. Xxxxxxxx x xxxxxxx
+              xxxxxxxxx xxxxxxxx x && y, x xxxxx x || y. Xxxxxxx xxxxxxxxx.
+            </li>
+
+            <li>
+              Task 16. В Казахстане, налог на объем двигателя составляет:
+              <ul>
+                <li>от 0 до 499 кубов - 2525 тенге</li>
+                <li>от 500 до 1199 кубов - 5050 тенге</li>
+                <li>от 1200 до 1599 кубов - 8275 тенге</li>
+                <li>от 1600 до 1899 кубов - 9675 тенге</li>
+                <li>от 1900 до 1999 кубов - 11075тенге</li>
+                <li>от 2000 и выше кубов - 15000 тенге</li>
+                <li>
+                  Напишите программу, где пользователь может ввести в input
+                  объем двигателя и получить налог на данный двигатель.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Task 17. Xxxxxxxx 2 xxxxxx. X xxxxxx xxxxxxxxxxxx xxxxx xxxxxx
+              xxxxx xxxxx x xxxxxxxx. Xx xxxxxx - xxxxxx euro, rub, uah.
+              Xxxxxxxxx if, elseif xxxxxxxx xx xxxxxxx xxxxxx xxxxxxxx x xx
+              xxxxxx, xxxxxxx xxxx xxxxxxxxxxxx. Xxxxxxxxxxxx - xxxxxxx x xxxx
+              xxxxxxxx.
+            </li>
+            <li>
+              Task 18. Проделайте предыдущую задачу с помощью switch case.
+            </li>
+            <li>
+              Task 19. Xxxxxxxx 2 input xxxx xxxxxxxxxxxx xxxxx xxxxxx xxxxx. X
+              xxxxxx input - xxxxx xxxxxx xxxx - xxxxx, xxxx, xxxxxxxx,
+              xxxxxxxx. X xxxxxxx if, else if xx xxxxxxx xxxxxx xxxxxxxx
+              xxxxxxxxx xxxxxxxxx xxxxxxxx xx xxxxxxxx.
+            </li>
+            <li>
+              Task 20. Xxxxxxxxxx xxxxxxxxxx xxxxxx x xxxxxxx switch case.
+            </li>
           </ul>
         </div>
-        <!--end hidden-mnu -->
       </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="header_content">
-          <div class="header_content_item">
-            <div class="header_cover">
-              <div class="header_title">
-                <h1>Учу javascript
-                  <span>c нуля до Vuejs!</span> </h1>
-              </div>
-              <div class="header_descr">
-                выучи язык * <span>- переселись в Канаду!</span>
-              </div>
-            </div>
-          </div>
+    </section>
+
+
+    <section class="block">
+      <div class="container">
+        <h2>3. Учу Оператор if, else, switch case - выбор в javascript</h2>
+        <div class="row">
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="block">
+      <div class="container">
+        <h2>2. Основы ввода данных</h2>
+        <div class="row">
+          <ul>
+            <li>
+              Task 1. Создайте две переменные a = 7 и b = 9. Выведите в консоль
+              результа умножения a на b.
+            </li>
+            <li>
+              Task 2. Создайте две переменные c = 7 и d = 9. Выведите на
+              страницу результат деления c на d.
+            </li>
+            <li>
+              Task 3. Xxxxxxxx xxx xxxxxxxxxx e = 3 x f = 5. Xxxxxxxx xx
+              xxxxxxxx xxxxxxxxx xxxxxxxx e + f.
+            </li>
+            <li>
+              Task 4. Создайте две переменные e1 = '3' и f1 = 5. Выведите на
+              страницу результат сложения e1 + f1. Объясните разницу.
+            </li>
+            <li>
+              Task 5. Создайте две переменные e2 = 3 и f2 = 0. Выведите на
+              страницу результат деления e2 на f2.
+            </li>
+            <li>
+              Task 6. Создайте две переменные e3 = 3 и f3 = 'Hello'. Выведите на
+              страницу результат сложения двух переменных.
+            </li>
+            <li>
+              Task 7. Xxxxxxxx xxx xxxxxxxxxx e4 = 3 x f4 = 'Hello'. Xxxxxxxx xx
+              xxxxxxxx xxxxxxxxx xxxxxxxxx xxxx xxxxxxxxxx.
+            </li>
+            <li>
+              Task 8. Создайте input и кнопку. По нажатию на кнопку выполняется
+              функция, которая выводит в консоль то, что пользователь ввел в
+              input.
+            </li>
+            <li>
+              Task 9. Xxxxxxxx input x xxxxxx. Xx xxxxxxx xx xxxxxx xxxxxxxxxxx
+              xxxxxxx, xxxxxxx xxxxxxx xx xxxxxxxx, xxx xxxxxxxxxxxx xxxx x
+              input. Xxxxxxxx xxxxxxx input xxxxx xxxxxxx xxxxxx.
+            </li>
+
+            <li>
+              Task 10. Создайте input и кнопку. По нажатию на кнопку выполняется
+              функция, которая выводит на страницу число, которое ввел
+              пользователь умноженное на 10.
+            </li>
+            <li>
+              Task 11. Xxxxxxxx input x xxxxxx. Xx xxxxxxx xx xxxxxx xxxxxxxxxxx
+              xxxxxxx, xxxxxxx xxxxxxx xx xxxxxxxx xxxxx, xxxxxxx xxxx
+              xxxxxxxxxxxx x x xxxx xxxxxxxxxxx xxxxx 10.
+            </li>
+            <li>
+              Task 12. Создайте два input и кнопку. В первый input пользователь
+              вводит имя, во второе фамилию. При нажатии кнопки выполняется
+              функция, которая выводит в консоль строку 'Hello имя фамилия', где
+              имя - имя пользователя и фамилия - введенная фамилия.
+            </li>
+            <li>
+              Task 13. Xxxxxxxx xxx input x xxxxxx. X input xxxxxxxxxxxx xxxxxx
+              xxxxx. Xxx xxxxxxx xxxxxx xxxxxxxxxxx xxxxxxx, xxxxxxx xxxxxxx
+              xxxxx xxxxxx xxxx xxxxx xx xxxxxxxx.
+            </li>
+            <li>
+              Task 14. Создайте input и пропишите ему в html value = 77. С
+              помощью JS измените value на 'Hello'.
+            </li>
+            <li>
+              Task 15. Создайте input и получите его в переменную y. В js
+              выполните следующее присвоение: y.style.border = '2px solid red' .
+              Изучите результат операции.
+            </li>
+            <li>
+              Task 16. Xxxxxxxx xxx input type=number, xxxx xxxxxxxxxxxx xxxxx
+              xxxxxx xxxxx. Xxxxxxxx xx xxxxxxxx xxxxx xxxxxx xxxxx.
+            </li>
+            <li>
+              Task 17. Создайте input type="text" куда пользователь может ввести
+              строку и число. Создайте функцию, которая запускается по нажатию
+              на кнопку. Получите значение из input в переменную t. А затем
+              сделайте операцию t = parseInt(t), и результат операции выведите в
+              консоль. Прочитайте за эту операцию. Попробуйте по очереди вводить
+              44, 44aaa, 44.3, a45 . Изучите вывод.
+            </li>
+            <li>
+              Task 18. Xxxxxxxx input type="text" xxxx xxxxxxxxxxxx xxxxx xxxxxx
+              xxxxxx x xxxxx. Xxxxxxxx xxxxxxx, xxxxxxx xxxxxxxxxxx xx xxxxxxx
+              xx xxxxxx. Xxxxxxxx xxxxxxxx xx input x xxxxxxxxxx t. X xxxxx
+              xxxxxxxx xxxxxxxx t = parseFloat(t), x xxxxxxxxx xxxxxxxx xxxxxxxx
+              x xxxxxxx. Xxxxxxxxxx xx xxx xxxxxxxx. Xxxxxxxxxx xx xxxxxxx
+              xxxxxxx 44, 44aaa, 44.3, a45 . Xxxxxxx xxxxx.
+            </li>
+            <li>
+              Task 19. Создайте два input type=number, куда пользователь может
+              ввести отрицательные числа. Выведите на страницу сумму данных
+              чисел. Мы это делали! Зачем? Затем, что нужно понимать как влияет
+              перевод в число с помощью + и parseInt на отрицательные числа!!!
+            </li>
+            <li>
+              Task 20. Xxxxxxxx xxxxxxxx, xxxx xxxxxxxxxxxx xxxxx xxxxxx xxx,
+              xxxxxxx, xxxxxxx, xxx xxxxxxx. X xxxxxx. Xx xxxxxxx xxxxxx
+              xxxxxxxx xx xxxxxxxx xxxxxxxxxxx 'Xxxxxxxxx Xxxx, Xxxxxx, xxx
+              xxxxxxx 33 xxxx, xx xxxxxxxx xx ...' xxxx xxxxxxxxx
+              xxxxxxxxxxxxxxx xxxxxx xx inputxx.
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </header>
-
-  <section class="block">
-    <div class="container">
-      <button class="chips">привет мир</button>
-
-
-      <h2>модальное окно</h2>
-      <button class="modal_show" data-modal="#sign-in">
-        купить
-      </button>
-
-
-    </div>
-  </section>
-
-
-  <section class="block">
-    <div class="container">
-      <h2>Работа с CSS</h2>
-
-      <div class="block_1"></div>
-
-
-      <div class="block_2"></div>
-      <p id="elem" class="www ggg zzz"></p>
-      <p id="elem_contans_class"></p>
-    </div>
-  </section>
-
-
-
-
-
-
-
-
-
-
-  <section class="block">
-    <div class="container">
-
-      <div class="sq_wrapper">
-
-        <div class="sq_wrapper_box"></div>
-
-      </div>
-
-
-    </div>
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-  <section class="block">
-    <div class="container">
-
-      <input id="proverka_input" type="text">
-
-      <button id="proverks">проверка</button>
-
-
-
-
-
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>простой калькулятор </h2>
-
-      <div class="calculate_date"> <span>Длина</span>
-        <input id="simple_width" type="text" placeholder="Введите длину">
-      </div>
-
-      <div class="calculate_date"> <span>Ширина</span>
-        <input id="simple_height" type="text" placeholder="Введите ширину">
-      </div>
-
-      <div class="calculate_date"> <span>Глубина</span>
-        <input id="simple_deep" type="text" placeholder="Введите глубину">
-      </div>
-
-      <div class="calculate_date"> <span>оборудование</span>
-        <input id="simple_develop" type="checkbox">
-      </div>
-      <div class="calculate_date"> <span>Фильтры</span>
-        <input id="simple_costfilter" type="checkbox">
-      </div>
-
-
-      <div class="calculate_date"> <span>Форма</span>
-
-        <input id="calculate_krug" class="calculate_radio" type="radio" name="formas" value="Круглая" checked>
-        <label for="calculate_krug">Круглая</label>
-
-        <input id="calculate_oval" class="calculate_radio" type="radio" name="formas" value="Овальная">
-        <label for="calculate_oval">Овальная</label>
-        <input id="calculate_pram" class="calculate_radio" type="radio" name="formas" value="Прямоугольная">
-        <label for="calculate_pram">Прямоугольная</label>
-      </div>
-
-      <select name="select-position" id="select_position">
-        <option value="1700">кран угловой</option>
-        <option value="1900">кран крестовой</option>
-        <option value="2300">кран барашковый</option>
-        <option value="2900">кран винтовой</option>
-      </select>
-
-
-
-
-
-
-      <button id="simple_button"> Результат </button>
-      <div id="simple_result"> </div>
-    </div>
-  </section>
-
-
-
-  <section class="block_my">
-    <div class="container">
-      <div class="row">
-        <div class="doble">
-
-          <div class="doble_fix">
-
-
-
-          </div>
-        </div>
-
-
-
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-  <section class="block">
-    <div class="container">
-      <h2>вычисляю циклы </h2>
-
-      <div class="cycle_one"> </div>
-
-      <div class="cycle_two"> </div>
-
-      <div class="cycle_try"> </div>
-    </div>
-  </section>
-
-
-
-
-
-  <section class="block">
-    <div class="container">
-      <h2>Как использовать клавиатуру для вычисления</h2>
-
-      <div id="keybord_dowble">
-        <input type="text">
-
-
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="block">
-    <div class="container">
-
-
-      <div class="title_block">Это заглавие</div>
-      <h2>Как использовать клавиатуру для вычисления</h2>
-
-      <div id="keybord">
-        <input type="text">
-      </div>
-
-      <div id="keybord_out "> </div>
-
-      <div id="keybord_out_two"> </div>
-    </div>
-
-
-
-    <div class="container">
-      <input type="text" id="get_data" placeholder="Получить данные">
-      <div id="get_data_altkey"></div>
-    </div>
-
-
-
-    <div class="container">
-      <input type="text" id="get_simbol" placeholder="Ограничить ">
-      <div id="get_simbol_altkey"></div>
-    </div>
-
-
-    <div class="container">
-      <div class="radio_group">
-        <input class="radio_group_input" type="radio" id="get_radio" value="1" name="onegroup" checked>
-        <label for="get_radio">первый</label>
-        <input class="radio_group_input" type="radio" id="get_radio1" value="2" name="onegroup">
-        <label for="get_radio1">второй</label>
-        <input class="radio_group_input" type="radio" id="get_radio2" value="3" name="onegroup">
-        <label for="get_radio2">третий</label>
-        <input class="radio_group_input" type="radio" id="get_radio3" value="4" name="onegroup">
-        <label for="get_radio3">четвертый</label>
-
-
-      </div>
-      <div class="radio_group_lebel"></div>
-    </div>
-
-    <div class="container">
-
-      <input type="text" id="get_reklama_test" placeholder="введите первое число">
-
-      <input type="text" id="get_reklama_test2" placeholder="введите второе число">
-
-      <button id="get_result_count">Результат</button>
-
-
-      <div id="get_reklama_result">
-      </div>
-
-      <div id="get_reklama_result2">
-      </div>
-    </div>
-
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Как использовать return для вычисления</h2>
-
-      <div id="block_return">
-
-
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Как использовать return для вычисления</h2>
-
-      <div id="block_blocks">
-        <p dataset="0"> 1Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Рыбного,
-          имени?
-        </p>
-        <p dataset="1"> 2Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Рыбного,
-          имени?
-        </p>
-        <p dataset="2"> 3Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Рыбного,
-          имени?
-        </p>
-        <p dataset="3"> 4Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Рыбного,
-          имени?
-        </p>
-
-
-      </div>
-
-      <div id="block_blocks_result_one"> </div>
-      <div id="block_blocks_result_two"> </div>
-
-      <div id="block_blocks_result_three"> </div>
-      <div id="block_blocks_result_four"> </div>
-
-
-
-
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>получение данных 6 урок</h2>
-
-      <div>
-        <input class="input_text" type="text">
-      </div>
-
-      <div>
-        <input class="input_pass" type="password">
-      </div>
-
-      <div>
-        <input class="input_range" type="range">
-      </div>
-
-
-      <div>
-        <input class="input_date" type="date">
-
-      </div>
-
-      <div>
-        <input class="input_color" type="color">
-      </div>
-
-
-      <div>
-        <input id="testiryu_checkbox" type="checkbox" name="checkbox" class="checkbox_check">
-
-        <label for="testiryu_checkbox"> активоруй меня</label>
-      </div>
-
-
-      <div>
-        <input value="сидя" id="testiryu_radio" type="radio" name="radio555" class="radio_check" checked>
-        <label for="testiryu_radio"> активация первая</label>
-
-        <input value="стоя" id="testiryu_radio1" type="radio" name="radio555" class="radio_check">
-        <label for="testiryu_radio1"> активация 2</label>
-
-        <input value="на крыше" id="testiryu_radio2" type="radio" name="radio555" class="radio_check">
-        <label for="testiryu_radio2"> активация 2</label>
-
-      </div>
-
-      <div>
-        <select name="" id="nothing_select">
-          <option value="с фотоаппаратом">с фотоапаратом</option>
-          <option value="со смартфоном">со смартфоном</option>
-          <option value="со скалкой">со скалкой</option>
-          <option value="с палкой">с палкой</option>
-        </select>
-      </div>
-
-      <div>
-        <button class="sendbuttonsout"> отправить</button>
-        <div class="text_inwert"></div>
-        <div class="input_pass_inwert"></div>
-        <div class="input_pass_checked"></div>
-        <div class="input_checkbox_checked"></div>
-        <div class="input_radio_checked"></div>
-        <div class="selected_info"></div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Событие мыши </h2>
-
-      <div id="lockingrong">
-
-        <p class="onclick"> onclick - <span class="onclick2"></span></p>
-        <p class="ondblclick"> ondblclick - <span class="ondblclick2"></span> </p>
-
-        <p class="onmousedown"> onmousedown - <span class="onmousedown2"></span> </p>
-        <p class="onmousemove"> onmousemove - <span class="onmousemove2"></span></p>
-
-        <p class="onmouseenter"> onmouseenter - <span class="onmouseenter2"></span> </p>
-        <p class="onmouseleave"> onmouseleave - <span class="onmouseleave2"></span></p>
-
-        <p class="onmouseout">onmouseout - <span class="onmouseout2"></span></p>
-        <p class="onmouseover">onmouseover - <span class="onmouseover2"></span></p>
-
-        <p class="onmouseup">onmouseup - <span class="onmouseup2"></span></p>
-        <p class="onwheel">onwheel - <span class="onwheel2"></span></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Решаю простую задачу </h2>
-      <div class="row">
-        <label class="oform_inputed" for="get_input"> Длина
-          <input class="get_input" id="get_input" type="text" placeholder="Получить данные">
-        </label>
-
-        <label class="oform_inputed" for="get_input2"> Это надпись
-          <input class="get_input" id="get_input2" type="text" placeholder="Получить данные">
-        </label>
-
-        <label class="oform_inputed" for="get_input3"> Это надпись
-          <input class="get_input" id="get_input3" type="text" placeholder="Получить данные">
-        </label>
-        <button id="submit_push" type="submit">Отослать</button>
-
-
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Вывод на страницу</h2>
-      <div class="row">
-        <div class="motion_pray">
-          <p>первое предложение</p>
-          <p>второе предложение</p>
-        </div>
-        <div class="notation_pray">
-          <h2>Это заглавие блока</h2>
-
-          <h3>Еще один заголовок этого блокавторое предложение</h3>
-
-          <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вскоре пор
-            буквенных, по всей? Напоивший точках сбить своего, силуэт запятой строчка города страну. </p>
-
-          <h3 class="notation_pray_h">Замена текста Еще один заголовок этого блокавторое предложение</h3>
-
-          <h4 class="notation_title">Второе заглавие, которое необходимо заменить</h4>
-
-          <h4 class="nothing_title">Второе заглавие, которое необходимо заменить</h4>
-
-          <h3 class="braike_title">
-            <span class="braike_title_span">Это заголовое для точной вставки</span>
-          </h3>
-
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="block_inner">
-    <div class="container">
-      <div class="row">
-
-        <div class="box_inner">
-          Этот текст, с которым
-          <div class="two">
-            <span>необходимо выполнять</span> действия,
-          </div>
-          <span>потому что ни кому</span>
-          он не нужен<h1>Ничего себе</h1>
-        </div>
-        <img id="fiest_img" src="https://cdn4.iconfinder.com/data/icons/hospital-19/512/11_hospital-128.png" alt="">
-        <input id="fiest_img_change" type="submit" value="менять картинку">
-      </div>
-    </div>
-
-
-
-
-  </section>
-  <section class="block">
-    <div class="container">
-      <div class="row">
-
-        <div class="blocks">
-          <label for="fd">длина аквариума, см</label>
-          <input id="fd" type="text" class="novytest" placeholder="Длина аквариума">
-        </div>
-        <div class="blocks">
-          <label for="fdd">Ширина аквариума, см</label>
-          <input id="fdd" type="text" class="shirinnovytest" placeholder="Ширина аквариума">
-        </div>
-
-        <div class="blocks">
-          <label for="fdv">Высота аквариума, см</label>
-          <input id="fdv" type="text" class="visotatest" placeholder="Высота аквариума">
-        </div>
-
-
-
-
-
-
-
-        <div class="novytest_input"></div>
-
-        <input class="novotest_submit" type="submit">
-
-
-
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Тестирую еще одно сравнение</h2>
-
-      <div id="claakaq23">5403434</div>
-
-      <div id="get_number_test"></div>
-
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Новая попытка</h2>
-
-      <input id="number_past" type="number" placeholder="Введите число">
-      <div id="number_past_input"></div>
-      <input id="number_submit" type="submit" value="Угадать число">
-
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Новая попытка</h2>
-      <div class="row">
-        <!-- 2 видео 21 50
-
-     -->
-        <div id="my_text_bold"></div>
-
-        <div id="my_text_two">Привет, программист, блин</div>
-        <div id="my_text_two_first"></div>
-        <div id="my_text_two_first_query"></div>
-        <div id="my_text_two_second"></div>
-        <div id="my_text_two_third"></div>
-
-
-        <div id="innoyChild"></div>
-        <div id="innoyChildQuery"></div>
-        <div id="innoyChildSecond"></div>
-        <div id="innoyChildQuerySecond"></div>
-
-        <div id="invertFunc"></div>
-
-
-
-        <button id="btn_firsr">кнопка</button>
-
-        <div id="btn_firsr_height"></div>
-        <div id="btn_firsr_height1"></div>
-
-        <div id="btn_firsr_height2"></div>
-        <div id="btn_firsr_height3"></div>
-
-        <button id="btn_second">кнопка 2</button>
-        <div id="btn_firsr_height4"></div>
-        <form>
-          <input id="input_first" type="text">
-          <input id="input_button_first" type="submit">
-          <div id="my_text_two_two"></div>
-
-        </form>
-        <button id="btn_thender">показать</button>
-
-        <button id="btn_dell">скрыть</button>
-
-
-
-        <style>
-          .modal {
-            width: 300px;
-            height: 300px;
-            text-align: center;
-            line-height: 300px;
-            background-color: #eee;
-            display: none;
-          }
-        </style>
-        <div class="modal">
-          Это модалка
-        </div>
-
-
-
-
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>операции сравнения</h2>
-
-
-      <div id="operat_srav"></div>
-      <div class="operat_srav"></div>
-
-
-      <div class="manipul_srav"></div>
-
-      <div class="manipul_srav2"></div>
-
-      <h2>К какому подъезду относится квартира </h2>
-      <div class="numberPodegd"></div>
-
-    </div>
-  </section>
-
-
-  <section class="block">
-    <div class="container">
-      <h2>Тесторование выравнивания текста с помощью Grid</h2>
-      <div class="row">
-        <div class="flex_cont">
-
-          <div class="flex_cont_int">
-
-            11jkjug hhghhh
-
-          </div>
-
-
-          <div class="flex_cont_int">
-            22jkjug hhghhh Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
-            Жизни, запятой, ее. Имеет вопроса себя рекламных коварный, злых коварных то. Текстов, всеми! 22jkjug
-            hhghhh Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Жизни,
-            запятой, ее. Имеет вопроса себя рекламных коварный, злых коварных то. Текстов, всеми! 22jkjug hhghhh
-            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Жизни, запятой,
-            ее. Имеет вопроса себя рекламных коварный, злых коварных то. Текстов, всеми!
-            22jkjug hhghhh Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
-            Жизни, запятой, ее. Имеет вопроса себя рекламных коварный, злых коварных то. Текстов, всеми!
-          </div>
+    </section>
+
+      <section class="block">
+      <div class="container">
+        <h2>2.Учу Основы ввода данных</h2>
+        <div class="row">
         </div>
       </div>
-    </div>
-  </section>
+      </section>
 
 
 
 
 
+    <section class="block">
+      <div class="container">
+        <h2>1. Стартуем и пишем первую программу</h2>
+        <div class="row">
+          <ul>
+            <li>Task 1. Выведите в консоль ваше имя.</li>
 
-  <section class="block">
-    <div class="container">
-      <h2 class="nothing_title_block">Типы данных</h2>
-      <div class="row">
-        <ul>
-          <li id="ecteout">number</li>
-          <li id="mindecte">number</li>
-          <li id="minteout">number</li>
-          <li id="muxout">number</li>
-          <li id="checkMe">number</li>
-          <li>number</li>
-          <li>string</li>
-          <li>boolean</li>
-          <li>object</li>
-          <li>null - ничего, но не определено</li>
-          <li>undefired</li>
-        </ul>
+            <li>
+              Task 2. Выведите в консоль номер месяца в котором вы родились.
+              Изучите чем отличается вывод числа и строки.
+            </li>
 
-        <ul id="list_result">
-          <li id="listNumberEnter"></li>
-          <li id="listStringEnter"></li>
-          <li id="listBooleanEnter"></li>
-          <li id="listObjEnter"></li>
-          <li id="listNulledEnter"></li>
-          <li id="noDataSite"></li>
-        </ul>
+            <li>
+              Task 3. Выведите в консоль строку: 'Добро '+'пожаловать '+' на
+              курс'
+            </li>
+            <li>
+              Task 4. X xxxxxxx alert xxxxxxxx xxxxx 2019. Xxxxx xxxxxxxxxxxx
+              xxxx - xxxxxxxxxxxxxxx xxx, xxxxx xx xxxxx xxx xxxxxxxxxx
+              xxxxxxxxxx
+            </li>
 
-        <ul id="list_result">
-          <li id="listNumberEnterOf"></li>
-          <li id="listStringEnterOf"></li>
-          <li id="listBooleanEnterOf"></li>
-          <li id="listObjEnterOf"></li>
-          <li id="listNulledEnterOf"></li>
-          <li id="noDataSiteOf"></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+            <li>
+              Task 5. С помощью alert выведите результат операции: 2019 - 200
+            </li>
+            <li>
+              Task 6. Создайте на странице div с id=one. С помощью
+              document.getElementById запишите в данный элемент текст 'Hello
+              World'.
+            </li>
+            <li>
+              Task 7. Создайте на странице div с id=two. С помощью
+              document.getElementById запишите в данный элемент результат
+              умножения 12 на 12. Умножение можно сделать с помощью знака
+              звездочки ( цифра 8).
+            </li>
+            <li>
+              Task 8. Xxxxxxxx div x xxxxxxx one. X xxxxxxx
+              document.querySelector xxxxxxxx x xxxxxx xxxxxxx xxxxx 'Hello
+              World'.
+            </li>
+            <li>
+              Task 9. Создайте следующую верстку на странице:
 
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block"> Базовые операции</h2>
-      <div class="row">
-        <ul id="list_result">
-          <li> Работаем с такими переменными: <span id="listbazzOne"></span>, <span id="listbazzTwo"></span></li>
-          <li> <span id="listbazzR"></span> + <span id="listbazzRwo"></span> = <span id="summResultOne"></span>
-          </li>
-          <li> <span id="listbazzW"></span> - <span id="listbazzWwo"></span> = <span id="vidnimResultOne"></span>
-          </li>
-          <li> <span id="delenieO"></span> / <span id="delenieT"></span> = <span id="delenieResultOne"></span> </li>
-          <li> <span id="mnozO"></span> * <span id="mnozT"></span> = <span id="mnozResultOne"></span></li>
-          <li> <span id="ostatkO"></span> % <span id="ostatkT"></span> = <span id="ostatkResultOne"></span></li>
-          <li> Конкатинация двух строк: <span id="firstConcatString"> </span> </li>
-          <li> Конкатинация одной строки и числа с виде строки: <span id="secondStringNumberResult"> </span> </li>
-          <li> Конкатинация одной строки и числа: <span id="thirdStringNumberResult"> </span> </li>
-          <li> Сумирование числа как строки с числом: <span id="lineSumResult"> </span> </li>
-          <li> Сумирование числа с числом как строки: <span id="lineSumResultSecond"> </span> </li>
-          <li> Сумирование True с числом <span id="booleanNumber"></span> = <span id="booleanSum"> </span> </li>
-          <li> Сумирование False с числом <span id="booleanNumber2"></span> = <span id="booleanSumTwoo"> </span>
-          </li>
+              <h2>Hello <span>everyone</span></h2>
+              Замените с помощью querySelector текст everyone на world.
+            </li>
+            <li>
+              Task 10. Создайте пустой div c классом three. С помощью
+              querySelector запишите внутрь div заголовок h3 с произвольным
+              текстом.
+            </li>
+            <li>
+              Task 11. Создайте пустой div c классом four. С помощью
+              querySelector запишите внутрь div заголовок h4 с произвольным
+              текстом и параграф p с произвольным текстом. Подсказка, чтобы
+              дописывать внутрь элемента используейте не innerHTML = , а
+              innerHTML += (плюс равно без пробела).
+            </li>
+            <li>
+              Task 12. Xxxxxxxx xxxxxxxx x xxxxxxx five. Xxxxxxxx xxx x
+              xxxxxxxxxx a. X xxxxxxx innerHTML xxxxxxxx xxxxxx xxxxxxxxxx a
+              xxxxx 3.1415. Xxxxxxx xxx x JS xxxxxxx xxxxx - xxxxx xxxxx xxx
+              xxxxx xxxxxxx!
+            </li>
+            <li>
+              Task 13. Xxxxxxxx div x xxxxxxx seven. Xxxxxxxx xxx x xxxxxxxxxx
+              div7. X xxxxxxx innerHTML xxxxxxxx x xxxx xxxxxx:
 
-          <li> Разница числа <span id="booleanNumber1"></span> и False = <span id="booleanDif"> </span> </li>
-
-          <li> Остаток от деления <span id="restDellNumberOne"></span> % <span id="restDellNumberTwo"></span>
-
-            = <span id="restDellNumberResult"> </span> </li>
-
-
-
-
-
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block"> Сложные операции</h2>
-      <div class="row">
-        <ul id="list_result">
-          <li> результат i++; База: <span id="dowdleBase"></span> Результат: <span id="dowdleBaseResult"></span>
-          </li>
-          <li> результат i--; База: <span id="dowdleVichet"></span> Результат: <span id="dowdleVichetResult"></span>
-          </li>
-          <li> результат ++i; База: <span id="dowdleUmnogen"></span> Результат: <span id="dowdleUmnogenResult"></span>
-          </li>
-          <li> результат --i; База:<span id="prefVichet"></span> Результат: <span id="prefVichetY"></span> </li>
-
-
-
-
-          <li> Сложное сложение i+=n(i=<span id="slogSlogenieBaceZ"></span> n=<span id="slogSlogenieModule"></span>):
-            Результат: <span id="slogSlogenieBace"></span> </li>
-
-          <li> Сложное вычитание i-=n(i=<span id="slogVichetBaceZ"></span> n=<span id="slogVichetModule"></span>):
-            Результат: <span id="slogVichetBace"></span> </li>
-
-          <li> Сложное умножение i*=n(i=<span id="slogUmnogenBaceZ"></span> n=<span id="slogUmnogModule"></span>):
-            Результат: <span id="slogUmnogBace"></span> </li>
-
-          <li> Сложное деление i*=n(i=<span id="slogDelenieBaceZ"></span> n=<span id="slogDelenieModule"></span>):
-            Результат: <span id="slogDelenieBace"></span> </li>
-
-
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block"> Операции сравнения</h2>
-      <div class="row">
-        <ul id="list_result">
-          <li> Сравнение <span id="sravnBolsheOne"></span> <span id="sravnBolsheTwo"></span> : <span
-              id="sravnBolshethree"></span>
-          </li>
-          <li> Проверка на равенство <span id="proverksRavestvoOne"></span> == <span id="proverksRavestvoTwo"></span> :
-            <span id="proverksRavestvothree"></span>
-          </li>
-          <li> Проверка на неравенство <span id="proverksNeRavestvoOne"></span> != <span
-              id="proverksNeRavestvoTwo"></span>
-            : <span id="proverksNeRavestvothree"></span>
-          </li>
-
-          <li> Проверка на абсолютное равенство на значение и тип данных: число <span id="absoluteRavestvoOne"></span>
-            === строка <span id="absoluteRavestvoTwo"></span> : <span id="absoluteRavestvothree"></span>
-          </li>
-
-          <li> Проверка на абсолютное не равенство на значение и тип данных: число <span
-              id="absoluteNeRavestvoOne"></span>
-            !== строка<span id="absoluteNeRavestvoTwo"></span> : <span id="absoluteNeRavestvothree"></span>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block"> Логические операторы</h2>
-      <div class="row">
-        <ul id="list_result">
-          <li> Логические операторы И && </li>
-          <li> Логические операторы ИЛИ || </li>
-          <li> Логические операторы НЕТ ! </li>
-
-        </ul>
-
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <section class="block Chocolate_block">
-    <div class="container">
-      <h2 class="title_block"> Примеры использования логических операторов</h2>
-      <div class="row">
-        <div class="test_block_cl">
-          <div class="test_block_items">
-            <ul>
-              <li id="cb_first"> </li>
-              <li id="cb_second"> </li>
-              <li id="cb_third"> </li>
-              <li id="cb_fore"> </li>
-              <li id="cb_five"> </li>
-            </ul>
-          </div>
-          <div class="test_block_items">
-            <ul>
-              <li id="cb_car_age"> </li>
-            </ul>
-
-
-          </div>
-          <div class="test_block_items">
-            <ul>
-              <li id="cb_tern"> </li>
-              <li id="maine_tern"> </li>
-              <li id="slog_tern"> </li>
-              <li id="sostav_tern"> </li>
-            </ul>
-          </div>
-          <div class="test_block_items">
-
-            <ul>
-              <li id="sovershen_message"></li>
-              <li id="sovershen_messagetwo"></li>
-              <li></li>
-              <li></li>
-            </ul>
-
-          </div>
-          <div class="test_block_items">88888888888888</div>
-          <div class="test_block_items">88888888888888</div>
-
-        </div>
-        <ul id="list_result">
-        </ul>
-
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block"> Оператор switch case </h2>
-      <div class="row">
-        <div class="test_block_cl">
-          <div class="test_block_items">
-            <ul class="switch_line">
-              <li id="switch_first"> </li>
-              <li id="switch_second"> </li>
-              <li id="switch_thirds"> </li>
-            </ul>
-          </div>
+              <img
+                src="https://cdn4.iconfinder.com/data/icons/food-and-drink-flat-gradient/32/cone_ice_cream_food_drink_sweet-512.png"
+                alt=""
+              />
+              Xxxxxxxx xxxxxxxx. Xxx xxxxxxxx xxxxxxxx xxxxxx, xxxxxxx xxx
+              xxxxxxxx xxxxxxx. Xxxxxxx xxxxx xxxxxxx xxxxxxxxxxxx. Xxxxxxx xxx
+              xxxxxxx xxxxxxxx xxxxxx xxxxxx xxxxxxxxxx xxxxxxxxx.
+            </li>
+            <li>
+              Task 14. Xxxxxxxx xxx xxxxxxxxxx z1 = 6, z2 = 3. Xxxxxxxx div,
+              xxxxx xxxxxxxxx xxxxxxxxxxxxxx x xxxxxxxx x xxxx xxxxxxxxx z1 xx
+              z2.
+            </li>
+            <li>
+              Task 15. Создайте две переменных y1 = 6, y2 = 3. Создайте div,
+              класс присвойте самостоятельно, выведите в него деление y1 на y2.
+            </li>
+            <li>
+              Task 16. Xxxxxxxx xxx xxxxxxxxxx x1='Hello', x2 = 5. Xxxxxxxx div,
+              xxxxx xxxxxxxxx xxxxxxxxxxxxxx, xxxxxxxx x xxxx xxxxx x1 + x2.
+              Xxxxxxx xxxxxxxxx xxxxxxxx.
+            </li>
+            <li>
+              Task 17. Xxxxxxxx div x xxxxxxx test-1. Xxxxxxxx xxx x xxxxxxxxxx
+              d1. Xxxxxxxx xxx xxxxxxxxxx x xxxxxxx. Xxxxxxx xxxxx.
+            </li>
+            <li>
+              Task 18. Создайте div.test-2. Получите его в переменную d2.
+              Выведите эту переменную в консоль. Присвойте d2 значение 5 (d2 =
+              5). Выведите переменную в консоль. Изучите вывод.
+            </li>
+            <li>
+              Task 19. Xxxxxxxx div c xxxxxxx s3 x div x xxxxxxx s4. Xxxxxxxx
+              div.s3 x xxxxxxxxxx divS3. Xxxxxxxx x xxxxxxx divS3. Xxxxxx
+              xxxxxxxx x xxx xx xxxxxxxxxx divS3 xxxx div c xxxxxxx s4. Xxxxxxxx
+              xxxxxxxxxx divS3 x xxxxxxx. Xxxxxxx xxx xxxxxxxxxx.
+            </li>
+            <li>
+              Task 20. Xxxxxxxx c xxxxxxx querySelector xxx body. X xxxxxxx
+              innerHTML xxxxxxxxx xxx xxxxxx xxxxxx (...innerHTML = ''). Xxxxxxx
+              xxx xxxxxxxxx. Xxxxxxxxxxxxxxx xxxx xxx.
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-
-
-
-  <section class="block Chocolate_block">
-    <div class="container">
-      <h2 class="title_block">Первые функции</h2>
-      <div class="row">
-
-
-
+    <section class="block">
+      <div class="container">
+        <h2>1. Учу Стартуем и пишем первую программу</h2>
+        <div class="row">
       </div>
     </div>
-  </section>
+    </section>
 
 
 
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block">Работа со строками</h2>
-      <div class="row">
 
-        <ol class="ol_list">
-          <li id="stroken_one"> </li>
-          <li id="stroken_two"> </li>
-          <li id="stroken_tri"> </li>
-          <li id="stroken_chetiry"> </li>
-          <li id="stroken_concat"> </li>
-
-          <li id="stroke_length"> Эту строку, которую я измеряю и проверяю, ну типо того .length </li>
-          <li id="how_do">Делаем символы в верхнем регистре .toUpperCase()</li>
-          <li id="strok_uppercase"> </li>
-          <li id="how_do"> Работаю с методом строчного элемента .toLowerCase() </li>
-          <li id="strok_lowercase"> </li>
-          <li id="how_do">Определяю первую букву предложения c помощью метода.charAt()</li>
-          <li id="strok_charat"> </li>
-          <li id="how_do">Возвращает число, представляющее значение символа в Юникоде по указанному индексу
-            .charCodeAt()</li>
-          <li id="strok_charcodeat"> </li>
-          <li id="how_do"></li>Oбъединяет текст из двух или более строк и возвращает новую строку .concat()</li>
-          <li id="strok_first_concat"> Это первая строка, которую </li>
-          <li id="strok_second_concat">я сейчас обьединю с этой строкой </li>
-          <li id="strok_result_concat"> </li>
-          <li id="how_do">Метод includes() проверяет, содержит ли строка заданную подстроку, и возвращает,
-            соответственно true или false.</li>
-          <li id="strok_includes"> Эту строку заберем и будем обрабатывать с помощью этого метода </li>
-          <li id="strok_includes_result_no"> </li>
-          <li id="strok_includes_result_yes"> </li>
-          <li id="strok_includes_result_yesregictr"> </li>
-          <li id="strok_indexof"> </li>
-          <li id="strok_substr"> </li>
-          <li id="stroke_Substr_IndexOf"> </li>
-          <li id="stroke_substring"> </li>
-
-          <li id="stroke_replace"> </li>
-          <li id="stroke_volueof"> </li>
-
-
-          <!-- <li id="st"> </li>
-
-              <li id="st"> </li> -->
-        </ol>
+    <section class="block">
+      <div class="container">
+        <h2>Задача по изучению: Массивы(часть 1)</h2>
+        <div class="row"></div>
       </div>
-    </div>
-  </section>
-
-  <section class="block Chocolate_block">
-    <div class="container">
-      <h2 class="title_block">Работа с числами</h2>
-      <div class="row">
-        <ol class="ol_list">
-          <li id="number_one"> </li>
-          <li id="how_do_white">Деление на ноль </li>
-          <li id="number_two"> </li>
-          <li id="how_do_white">Деление на строку, если число без букв в ковычках оно приобразуется в number </li>
-          <li id="number_three"> </li>
-          <li id="how_do_white">Умножение на строку </li>
-          <li id="number_Umnog"> </li>
-          <li id="how_do_white">Сумирование с строкой (конкатинация) </li>
-          <li id="number_summ"> </li>
-          <li id="how_do_white">Отнимание строки от числа </li>
-          <li id="number_unsumm"> </li>
-          <li id="how_do_white">Преобразование числа в строку</li>
-          <li id="number_tostring"> </li>
-
-
-          <li id="how_do_white">Сокращение дробного числа и превращение в строку </li>
-          <li id="number_tofixed"> </li>
-          <li id="number_tofixedsr"> </li>
-
-          <li id="how_do_white">Если в результате преобразований получена строка, но нужно его испльзовать в
-            вычислениях </li>
-          <li id="number_tonumberppreobraz"> </li>
-          <li id="number_tonumberparsefloat"> </li>
-          <li id="number_tonumbertype"> </li>
-
-          <li id="how_do_white"> То, что выше, только целое число, без десятичных</li>
-          <li id="number_tonumberparseint"> </li>
-          <li id="how_do_white">Метод проверяет валидное ли получаемое число и можно с ним в дальнейшем работать
-          </li>
-          <li id="number_toisnan"> </li>
-          <li id="number_toisnan1"> </li>
-          <li id="number_toisnan2"> </li>
-          <li id="how_do_white">Проверка на бесконечность </li>
-          <li id="number_finite"> </li>
-          <li id="number_finitetrue"> </li>
-          <li id="how_do_white">Округление вниз </li>
-          <li id="number_mathfloor"> </li>
-          <li id="how_do_white">Округление вверх </li>
-          <li id="number_mathceil"> </li>
-          <li id="how_do_white">Округление вверх </li>
-          <li id="number_mathround"> </li>
-        </ol>
-
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block">Работа с масивами</h2>
-      <div class="row">
-        <ol class="ol_list">
-          <li id="masive_one"> </li>
-          <li id="masive_one_viborka"> </li>
-          <li id="masive_two_viborka"> </li>
-          <li id="masive_three_viborka"> </li>
-          <li id="masive_foure_viborka"> </li>
-          <li id="masive_five_viborka"> </li>
-          <li id="masive_six_viborka"> </li>
-          <li id="masive_seven_viborka"> </li>
-          <li id="masive_eight_viborka"> </li>
-        </ol>
-
-
-      </div>
-    </div>
-  </section>
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block">Работа с объектами</h2>
-      <div class="row">
-
-        <ol class="ol_list">
-          <li id="how_do">первый результат прогона цикла по масиву</li>
-          <li id="object_two">П </li>
-          <li id="object_three">П </li>
-          <li id="object_four">П </li>
-          <li id="object_five">П </li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block">Работа со циклами</h2>
-      <div class="row">
-        <ol class="ol_list">
-          <li id="how_do"> Работаю с первым циклом</li>
-          <li id="cycles_one">console.log(i); </li>
-          <li id="cycles_twu">console.log(i); </li>
-
-        </ol>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block">Работа с DOM</h2>
-      <div class="row">
-        <h1>Это заголовок с которым буду работать</h1>
-        <ol class="ol_list">
-          <li id="how_do"> Работаю с DOM</li>
-          <li id="dom_one">Это наполнение контенера с заданным id </li>
-          <li id="dom_one_input"> </li>
-          <li class="dom_twu">Это наполнение dnjhjuj rkfccfс заданным class </li>
-          <li class="dom_twu">Это пробное тестирование тега с заданным class </li>
-
-          <li class="dom_twu">Это наполнение контенера с заданным class </li>
-        </ol>
-        <div>Это список</div>
-        <ul>
-          <li>Первый пункт</li>
-          <li>Второй пункт</li>
-          <li>Третий пункт</li>
-          <li>Четвертый пункт</li>
-        </ul>
-        <h2 id="vstavka_cont">Сюда вставляю текст</h2>
-        <form action="">
-          <input id="id_input_get" type="text" value="">
-          <div id="id_input_out"></div>
-
-
-        </form>
-
-
-        <a class="get_links" href="https://buro.businesskvest.ru/" title="это моя ссылка" target="_blank">это ссылка
-          на сайт</a>
-        <div id="id_kinks"></div>
-        <div id="id_kinks2"></div>
-        <div id="id_kinks3"></div>
-        <div class="id_kinks4"></div>
-        <div class="id_kinks5"></div>
-
-
-        <ul class="manipul">
-          <li id="manipul_digest" class="manipul_digest">первый пункт</li>
-          <li id="manipul_digest1" class="red">второй пункт</li>
-          <li id="manipul_digest_in"> </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block">Как добавить события</h2>
-
-      <h3 id="clickme_text"> сюда делаю события по клику на кнопку</h3>
-      <button id="clickme">кликни</button>
-
-      <table id="outside">
-            <tr>
-          <td id="t1">один</td>
-        </tr>
-            <tr>
-          <td id="t2">два</td>
-        </tr>
-      </table>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block">Делаю простой калькулятор</h2>
-      <div class="row">
-        <form action="">
-          <label for="getWidthPool">Длина
-            <input type="number" id="getWidthPool">
-          </label>
-          <label for="getHeightPool">Ширина
-            <input type="number" id="getHeightPool">
-          </label>
-          <label for="getMinDeepPool">Мин глубина
-            <input type="number" id="getMinDeepPool">
-          </label>
-          <label for="getMaxDeepPool">Максимальная глубина
-            <input type="number" id="getMaxDeepPool">
-          </label>
-        </form>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="block">
-    <div class="container">
-      <h2 class="title_block"> Работаю над JAVASCRIPT</h2>
-      <h3 class="title_block_descr"> работа над базовыми навыками javascript, которые нужны для написания
-        самых простых элементов, код размещен в документе common.js</h3>
-      <div class="row">
-        <div class="col-lg-3">
-          <div id="cont_one"> </div>
-        </div>
-        <div class="col-lg-3">
-          <div id="cont_two"> </div>
-        </div>
-        <div class="col-lg-3">
-          <div id="cont_three"> </div>
-        </div>
-        <div class="col-lg-3">
-          <div id="cont_foure"> </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="padding_block">
-
-  </section>
-
-
-
-
-
-
-
-
-
-
-  <section class="block block_h grey_block">
-    <div class="container">
-      <h2 class="title_block">Изучаю Javascript: 2 блок</h2>
-
-      <div class="row">
-        <div class="col-md-6">
-
-          <form id="calc_f" class="forms-calldecor">
-            <input type="hidden" name="admin-data" value="форма размещена в калькуляторе">
-            <input type="hidden" name="formaone" value="форма не размещена во всплывающем окне">
-
-            <div class="price_box_inn">
-              <div class="price_box_inn_left">
-                <div class="checkbox_box_master">
-                  <div class="checkbox_box">
-                    <div class="checkbox custom">
-                      <input id="calculate_checkboxone" class="css-checkbox" type="checkbox" />
-                      <label for="calculate_checkboxone" class="css-label">Нужен ли выполнить прототип проекта
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="price_box_inn_right">
-                <span> тут цена услуги</span>
-              </div>
-            </div>
-
-
-            <div class="price_box_inn">
-              <div class="price_box_inn_left">
-                <div class="checkbox_box_master">
-                  <div class="checkbox_box">
-                    <div class="checkbox custom">
-                      <input id="calculate_checkboxtwo" class="css-checkbox" type="checkbox" />
-                      <label for="calculate_checkboxtwo" class="css-label">Нужно ли выполнить макет проекта в
-                        формате
-                        PSD
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="price_box_inn_right">
-                <span> тут цена услуги</span>
-              </div>
-            </div>
-
-
-
-
-            <div class="price_box_inn">
-              <div class="price_box_inn_left">
-                <div class="checkbox_box_master">
-                  <div class="checkbox_box">
-                    <div class="checkbox custom">
-                      <input id="calculate_checkboxtree" class="css-checkbox" type="checkbox" />
-                      <label for="calculate_checkboxtree" class="css-label">Нужно ли выполнить обыную вестку макета
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="price_box_inn_right">
-                <span> тут цена услуги</span>
-              </div>
-            </div>
-
-
-            <div class="price_box_inn">
-              <div class="price_box_inn_left">
-                <div class="checkbox_box_master">
-                  <div class="checkbox_box">
-                    <div class="checkbox custom">
-                      <input id="calculate_checkboxfoure" class="css-checkbox" type="checkbox" />
-                      <label for="calculate_checkboxfoure" class="css-label">Нужно ли выполнить адаптивную вестку
-                        макета
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="price_box_inn_right">
-                <span> тут цена услуги</span>
-              </div>
-            </div>
-
-
-            <div class="price_box_inn">
-              <div class="price_box_inn_left">
-                <div class="checkbox_box_master">
-                  <div class="checkbox_box">
-                    <div class="checkbox custom">
-                      <input id="calculate_checkboxfive" class="css-checkbox" type="checkbox" />
-                      <label for="calculate_checkboxfive" class="css-label">Нужно ли выполнить посадку верстки на
-                        Wordpress
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="price_box_inn_right">
-                <span> тут цена услуги</span>
-              </div>
-            </div>
-
-
-          </form>
-
-
-
-
-        </div>
-        <div class="col-md-6">
-
-
-
-
-
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="block block_h grey_block" id="catalog">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="b_w">
-            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Это заглавных
-            пунктуация, о не родного, грамматики прямо оксмокс до силуэт что ведущими?
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="b_w">
-            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Это заглавных
-            пунктуация, о не родного, грамматики прямо оксмокс до силуэт что ведущими?
-            <a href="#call-backtimer" class="submit" data-form="заказ на Ergobox 3S/3PR цена 55 000 / 60 800"
-              data-text="Успейте оставить заявку сейчас">
-              Оставить заявку
-            </a>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block block_h Aqua_block" id="consultation">
-    <div class="container">
-      <h2>Название блока с кнопкой</h2>
-      <div class="row">
-
-        <div id="wrapblock">
-          Тестирую функцию изменения контейнера оп стилю класса
-
-        </div>
-        <button value="Нажми сюда">Нажми сюда</button>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="block BlueViolet_block" id="adwiceme">
-
-    <div class="container">
-      <h2>Название блока с кнопкой</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-          <h2 class="f_d"> это заголовок</h2>
-          <h2 class="f_k"> это второй заголовок</h2>
-
-          <h4 class="f_q"> это родитель 1
-            <div class="f_q1">это первый ребенок</div>
-            <span class="f_q2">это второй ребенок</span>
-            <p>это второй ребенок <span>здесь спан</span></p>
-            <p>это третий ребенок <span>здесь спаны</span> </p>
-          </h4>
-
-          <h3 class="f_q"> это родитель 2
-            <p>это второй ребенок <span>здесь спан</span></p>
-            <span>Это жопа</span>
-            <p>это третий ребенок <span>здесь спаны</span> </p>
-          </h3>
-          <a href="#" id="terpilo">Это ссылка </a>
-          <a href="#" id="terpilotero">Это ссылка </a>
-
-
-          <div class="bigtimo">
-
-            <p>grjrgjhr</p>
-            <p>grjrgjhr</p>
-            <p>grjrgjhr</p>
-            <p>grjrgjhr</p>
-
-            <li>loremru23</li>
-            <li>loremru23</li>
-            <li>loremru23</li>
-            <li>loremru23</li>
-            <li>loremru23</li>
-            <li>loremru23</li>
-          </div>
-        </div>
-        <div class="col-md-6"></div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="block BlueViolet_block" id="adwiceme">
-
-    <div class="container">
-      <h2>Взаимодействие с элментами по атрибутам</h2>
-      <div class="row">
-
-        <div class="col-md-12">
-
-          <div class="boxcurico">
-
-            <a href="#"> Это ссылка первая для выборки по атрибутам
-            </a>
-            <a href="#" title="первый атибут"> Это ссылка вторая для выборки по атрибутам
-            </a>
-            <a href="#" title="первый атибут" data-target="admin"> Это ссылка вторая для выборки по атрибутам
-              data-target=admin </a>
-
-            <a href="#" title="первый атибут" data-target="demo"> Это ссылка вторая для выборки по атрибутам
-              data-target=demo
-            </a>
-
-            <a href="#" title="первый атибут" data-target="admin-data"> Это ссылка вторая для выборки по атрибутам
-              data-target=admin
-            </a>
-            <a href="images/xxx.jpg" download>Скачать файл</a>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-  <section class="block" id="adwiceme">
-
-    <div class="container">
-      <h2>Простые фильтры JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-          <div class="simpleel">
-            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вскоре путь
-              семь
-              даль эта, осталось первую пояс буквенных, букв, не проектах бросил!
-            </p>
-            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вскоре путь
-              семь
-              даль эта, осталось первую пояс буквенных, букв, не проектах бросил!
-            </p>
-            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вскоре путь
-              семь
-              даль эта, осталось первую пояс буквенных, букв, не проектах бросил!
-            </p>
-            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вскоре путь
-              семь
-              даль эта, осталось первую пояс буквенных, букв, не проектах бросил!
-            </p>
-            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вскоре путь
-              семь
-              даль эта, осталось первую пояс буквенных, букв, не проектах бросил!
-            </p>
-            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вскоре путь
-              семь
-              даль эта, осталось первую пояс буквенных, букв, не проектах бросил!
-            </p>
-            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вскоре путь
-              семь
-              даль эта, осталось первую пояс буквенных, букв, не проектах бросил!
-            </p>
-
-            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вскоре путь
-              семь
-              даль эта, осталось первую пояс буквенных, букв, не проектах бросил!
-            </p>
-            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вскоре путь
-              семь
-              даль эта, осталось первую пояс буквенных, букв, не проектах бросил!
-            </p>
-
-
-          </div>
-
-
-        </div>
-
-        <div class="col-md-6">
-          <div class="simpleel_list">
-            <h1>Это заголовок h1</h1>
-            <h2>Это заголовок h2</h2>
-            <h3>Это заголовок h3</h3>
-            <h4>Это заголовок h4</h4>
-            <h5>Это заголовок h5</h5>
-            <h6>Это заголовок h6</h6>
-          </div>
-          <ol class="simpleel_list">
-
-            <li>первый список, который нужно протестировать и оттерстировать </li>
-            <li>второй список, который нужно протестировать и оттерстировать </li>
-            <li>третий список, который нужно протестировать и оттерстировать </li>
-            <li>четвертый список, который нужно протестировать и оттерстировать </li>
-            <li>пятый список, который нужно протестировать и оттерстировать </li>
-            <li>шестой список, который нужно протестировать и оттерстировать </li>
-            <li>седьмой список, который нужно протестировать и оттерстировать </li>
-            <li>восьмой список, который нужно протестировать и оттерстировать </li>
-            <li>девятый список, который нужно протестировать и оттерстировать </li>
-            <li>десятый список, который нужно протестировать и оттерстировать </li>
-            <li>одинадцатый список, который нужно протестировать и оттерстировать </li>
-            <li>двенадцатый список, который нужно протестировать и оттерстировать </li>
-            <li>тринадцатый список, который нужно протестировать и оттерстировать </li>
-            <li>четырнадцатый список, который нужно протестировать и оттерстировать </li>
-            <li>пятнадцатый список, который нужно протестировать и оттерстировать </li>
-            <li>шестнадцатый список, который нужно протестировать и оттерстировать </li>
-
-
-            <li>семнадцать список, который нужно протестировать и оттерстировать </li>
-            <li>восемнадцать список, который нужно протестировать и оттерстировать </li>
-            <li>девятнадцать список, который нужно протестировать и оттерстировать </li>
-            <li>двадцать список, который нужно протестировать и оттерстировать </li>
-
-          </ol>
-
-          <div class="develo">
-            <ul>
-              <li>Это список</li>
-              <li>Это второй список</li>
-            </ul>
-          </div>
-
-          <div class="visibl">
-            <ul>
-              <li>Еще один список</li>
-              <li>Еще второй список</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="adwiceme">
-
-    <div class="container">
-      <h2>Фильтры по содержимому JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-          <div class="cderjanie">
-            <p> это djom попытка которая нужно действовать и не действовать но ще Далеко-далеко за словесными горами
-              в
-              стране, гласных и согласных живут рыбные тексты. Знаках использовало все большого злых которое океана
-              языком необходимыми, запятой текстов от всех, дороге. Семь страну родного все, ты вскоре? Злых о
-              курсивных, послушавшись меня.
-            </p>
-            <p>Далеко-далеко за словесными <span> горами в стране,</span> гласных и согласных живут рыбные тексты.
-              Но
-              языком маленькая, ее она себя строчка парадигматическая повстречался бросил буквенных?
-            </p>
-            <form action="#" method="post">
-              <div class="form_input">
-                <label for="name">Text Input:</label>
-                <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Это плейсхолдер" />
-              </div>
-
-              <div>
-                <h4>Radio Button Choice</h4>
-
-                <label for="radio-choice-1">Choice 1</label>
-                <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
-
-                <label for="radio-choice-2">Choice 2</label>
-                <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
-              </div>
-
-              <div>
-                <label for="select-choice">Select Dropdown Choice:</label>
-                <select name="select-choice" id="select-choice">
-                  <option value="Choice 1">Choice 1</option>
-                  <option value="Choice 2">Choice 2</option>
-                  <option value="Choice 3">Choice 3</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="textarea">Textarea:</label>
-                <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
-              </div>
-
-              <div>
-                <label for="checkbox">Checkbox:</label>
-                <input type="checkbox" name="checkbox" id="checkbox" />
-              </div>
-
-              <div>
-                <input type="submit" value="Submit" />
-              </div>
-            </form>
-
-
-
-
-
-
-          </div>
-        </div>
-        <div class="col-md-6">
-          fff
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="block" id="adwiceme">
-
-    <div class="container">
-      <h2>Фильтры форм JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-  <section class="block">
-
-    <div class="container">
-      <h2>События мыши JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-          <div class="mouse_text_b">
-            <div class="mouse_text">Это текст который должен быть покрашен</div>
-            <button>Это кнопка</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <section class="block">
-
-    <div class="container">
-      <h2>События клавиатуры JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-
-
-
-  <section class="block">
-
-    <div class="container">
-      <h2>События браузера и страницы JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-  <section class="block">
-
-    <div class="container">
-      <h2>Базовые события on and off JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-
-    <div class="container">
-      <h2>Переменные и их свойства JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Практика Драм машина JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Практика Всплывающие окна JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Практика Табы JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Практика Слайдеры JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Практика. Адаптивное меню JQUERY 16 </h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Практика Калькулятор на сайт JQUERY 17 </h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Практика Кредитная карточка JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>Основы AJAX JQUERY</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2>20 - Введение в библиотеку jQuery UI</h2>
-      <div class="row">
-
-        <div class="col-md-6">
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block block_h Chocolate_block" id="contacts">
-
-
-
-  </section>
-
-
-
-  <script src="js/scripts.min.js"></script>
-
-
-
-
-
-
-  <!-- Yandex.Metrika counter -->
-  <!-- /Yandex.Metrika counter -->
-  <!-- Google Analytics counter -->
-  <!-- /Google Analytics counter -->
-</body>
-
+    </section>
+
+    <script src="js/scripts.min.js"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google Analytics counter -->
+    <!-- /Google Analytics counter -->
+  </body>
 </html>
